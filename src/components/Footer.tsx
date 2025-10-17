@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} East Style. Celebrating Korean, Japanese & Taiwanese fashion and beauty.</p>
+          <p>&copy; {currentYear} East Style. Celebrating Asian fashion and beauty.</p>
         </div>
       </div>
     </footer>

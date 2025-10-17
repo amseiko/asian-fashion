@@ -38,7 +38,7 @@ const BeautyGuide = () => {
               Beauty Essentials
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              East Asian beauty is all about healthy, glowing skin and enhancing your natural features with carefully curated products and techniques.
+              Asian beauty is all about healthy, glowing skin and enhancing your natural features with carefully curated products and techniques.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

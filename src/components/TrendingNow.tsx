@@ -52,7 +52,7 @@ const TrendingNow = () => {
             Trending Now
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay ahead of the curve with the latest trends sweeping across East Asia
+            Stay ahead of the curve with the latest trends sweeping across Asia
           </p>
         </div>
 
