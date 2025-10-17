@@ -1,38 +1,39 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Regions", href: "#regions" },
+    { name: "Fashion", href: "#fashion" },
+    { name: "Beauty", href: "#beauty" },
     { name: "Trends", href: "#trends" },
-    { name: "Heritage", href: "#heritage" },
-    { name: "Designers", href: "#designers" },
+    { name: "Skincare", href: "#skincare" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <a href="/" className="font-display text-2xl font-bold text-primary">
-            Asian Fashion Chronicles
+        <div className="flex items-center justify-between h-16">
+          <a href="/" className="font-display text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            East Style
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-sm"
               >
                 {link.name}
               </a>
             ))}
-            <Button variant="default" size="sm">
-              Subscribe
+            <Button size="sm" className="gap-2">
+              <ShoppingBag className="w-4 h-4" />
+              Shop
             </Button>
           </div>
 
@@ -60,8 +61,9 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="default" size="sm" className="w-full">
-                Subscribe
+              <Button size="sm" className="w-full gap-2">
+                <ShoppingBag className="w-4 h-4" />
+                Shop
               </Button>
             </div>
           </div>

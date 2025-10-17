@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import RegionalShowcase from "@/components/RegionalShowcase";
-import ModernTrends from "@/components/ModernTrends";
-import CulturalHeritage from "@/components/CulturalHeritage";
-import DesignerSpotlight from "@/components/DesignerSpotlight";
+import RegionalStyles from "@/components/RegionalStyles";
+import BeautyGuide from "@/components/BeautyGuide";
+import SkincareRoutine from "@/components/SkincareRoutine";
+import TrendingNow from "@/components/TrendingNow";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,10 +12,10 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <RegionalShowcase />
-        <ModernTrends />
-        <CulturalHeritage />
-        <DesignerSpotlight />
+        <RegionalStyles />
+        <BeautyGuide />
+        <SkincareRoutine />
+        <TrendingNow />
       </main>
       <Footer />
     </div>
