@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { getBlogPost, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
 
@@ -69,11 +69,11 @@ const BlogPost = () => {
 
             {/* Article Header */}
             <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-8">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium border border-primary/20">
+              <div className="flex flex-wrap items-center gap-4 mb-6">
+                <span className="px-4 py-1.5 bg-primary/10 text-primary text-sm rounded-full font-medium border border-primary/20">
                   {post.category}
                 </span>
-                <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4" />
                   {new Date(post.date).toLocaleDateString('en-US', { 
                     month: 'long', 
@@ -81,33 +81,67 @@ const BlogPost = () => {
                     year: 'numeric' 
                   })}
                 </span>
-                <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
                   <Clock className="w-4 h-4" />
                   {post.readTime}
                 </span>
               </div>
 
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 {post.title}
               </h1>
 
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 {post.excerpt}
               </p>
+
+              {/* Author Info */}
+              <div className="flex items-center gap-4 pt-6 border-t border-border">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                  <User className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">{post.author.name}</div>
+                  <div className="text-sm text-muted-foreground">{post.author.bio}</div>
+                </div>
+              </div>
             </div>
 
             {/* Article Body */}
-            <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-12">
+            <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-12 shadow-sm">
               <div className="prose prose-lg max-w-none
                 prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground
-                prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
-                prose-p:text-muted-foreground prose-p:leading-relaxed
-                prose-strong:text-foreground prose-strong:font-semibold
-                prose-ul:text-muted-foreground prose-ol:text-muted-foreground
-                prose-li:my-1
-                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 prose-h1:border-b prose-h1:border-border prose-h1:pb-4
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-primary
+                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-secondary
+                prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2
+                prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
+                prose-strong:text-foreground prose-strong:font-semibold prose-strong:bg-primary/5 prose-strong:px-1 prose-strong:rounded
+                prose-ul:text-muted-foreground prose-ul:my-6 prose-ul:space-y-2
+                prose-ol:text-muted-foreground prose-ol:my-6 prose-ol:space-y-2
+                prose-li:my-2 prose-li:leading-relaxed
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:bg-muted/30 prose-blockquote:py-2 prose-blockquote:my-6
+                prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-foreground
+                prose-pre:bg-muted prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto
+                prose-a:text-primary prose-a:no-underline prose-a:font-medium hover:prose-a:underline hover:prose-a:text-primary/80
+                prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
+                prose-hr:border-border prose-hr:my-8
               ">
                 <ReactMarkdown>{post.content}</ReactMarkdown>
+              </div>
+
+              {/* Author Card at Bottom */}
+              <div className="mt-12 pt-8 border-t-2 border-border">
+                <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 flex items-start gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <User className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground mb-1">Written by</div>
+                    <div className="font-display text-xl font-bold text-foreground mb-2">{post.author.name}</div>
+                    <div className="text-muted-foreground">{post.author.bio}</div>
+                  </div>
+                </div>
               </div>
             </div>
 

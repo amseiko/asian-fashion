@@ -8,6 +8,10 @@ export interface BlogPost {
   date: string;
   readTime: string;
   image: string;
+  author: {
+    name: string;
+    bio: string;
+  };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -17,9 +21,13 @@ export const blogPosts: BlogPost[] = [
     slug: "complete-guide-korean-glass-skin",
     excerpt: "Achieve that coveted dewy, luminous complexion with this comprehensive guide to the Korean glass skin routine.",
     category: "Skincare",
-    date: "2025-01-15",
+    date: "2025-09-28",
     readTime: "8 min read",
     image: "/src/assets/skincare-routine.jpg",
+    author: {
+      name: "Sophie Kim",
+      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines"
+    },
     content: `
 # The Complete Guide to Korean Glass Skin
 
@@ -93,9 +101,13 @@ Remember, glass skin is a marathon, not a sprint. Be patient with your routine a
     slug: "japanese-minimalist-fashion-guide",
     excerpt: "Discover the art of Japanese minimalist fashion and learn how to build a timeless, versatile wardrobe.",
     category: "Fashion",
-    date: "2025-01-12",
+    date: "2025-09-22",
     readTime: "7 min read",
     image: "/src/assets/japan-beauty-style.jpg",
+    author: {
+      name: "Yuki Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate"
+    },
     content: `
 # Japanese Minimalist Fashion: A Complete Style Guide
 
@@ -247,9 +259,13 @@ Start small, be intentional, and remember: less is truly more.
     slug: "taiwanese-beauty-trends-2025",
     excerpt: "Taiwan's beauty scene is exploding with innovation. Here are the top Taiwanese beauty trends taking over.",
     category: "Beauty",
-    date: "2025-01-10",
+    date: "2025-09-15",
     readTime: "6 min read",
     image: "/src/assets/taiwan-style.jpg",
+    author: {
+      name: "Mei Lin Chen",
+      bio: "Taipei beauty blogger and T-beauty product reviewer"
+    },
     content: `
 # Taiwanese Beauty Trends You Need to Know in 2025
 
@@ -470,9 +486,13 @@ Don't sleep on T-beauty—it's the next big thing in Asian skincare!
     slug: "k-beauty-vs-j-beauty-comparison",
     excerpt: "Understanding the differences between Korean and Japanese beauty philosophies to find your perfect skincare match.",
     category: "Skincare",
-    date: "2025-01-08",
+    date: "2025-09-10",
     readTime: "9 min read",
     image: "/src/assets/kbeauty-products.jpg",
+    author: {
+      name: "Sophie Kim",
+      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines"
+    },
     content: `
 # K-Beauty vs J-Beauty: Which Philosophy is Right for You?
 
@@ -750,9 +770,13 @@ Start with products that excite you, whether that's Korean innovation or Japanes
     slug: "how-to-style-oversized-fashion",
     excerpt: "Master the art of oversized fashion with tips from Korean, Japanese, and Taiwanese street style.",
     category: "Fashion",
-    date: "2025-01-05",
+    date: "2025-09-05",
     readTime: "7 min read",
     image: "/src/assets/hero-beauty-fashion.jpg",
+    author: {
+      name: "Yuki Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate"
+    },
     content: `
 # How to Style Oversized Fashion: Asian Street Style Guide
 
@@ -1059,9 +1083,13 @@ Most importantly, wear what makes you feel good. Fashion rules are meant to be g
     slug: "ultimate-guide-asian-sunscreens",
     excerpt: "Why Asian sunscreens are superior and how to choose the perfect one for your skin type.",
     category: "Skincare",
-    date: "2025-01-03",
+    date: "2025-09-18",
     readTime: "10 min read",
     image: "/src/assets/skincare-routine.jpg",
+    author: {
+      name: "Dr. Hannah Park",
+      bio: "Dermatologist and sunscreen formulation expert based in Seoul"
+    },
     content: `
 # The Ultimate Guide to Asian Sunscreens
 
@@ -1456,9 +1484,13 @@ The best sunscreen is the one you'll actually use every single day. With Asian s
     slug: "asian-makeup-trends-beginners",
     excerpt: "Master the basics of Korean, Japanese, and Taiwanese makeup with this beginner-friendly guide.",
     category: "Beauty",
-    date: "2025-01-01",
+    date: "2025-09-02",
     readTime: "11 min read",
     image: "/src/assets/makeup-trends.jpg",
+    author: {
+      name: "Mei Lin Chen",
+      bio: "Taipei beauty blogger and T-beauty product reviewer"
+    },
     content: `
 # Asian Makeup Trends for Beginners: A Complete Guide
 
