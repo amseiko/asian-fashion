@@ -1,12 +1,24 @@
 import heroImage from "@/assets/hero-beauty-fashion.jpg";
+import heroMaleImage from "@/assets/hero-male-fashion-beauty.jpg";
 import { Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const heroImages = [heroImage, heroMaleImage];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+        style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background"></div>
       </div>

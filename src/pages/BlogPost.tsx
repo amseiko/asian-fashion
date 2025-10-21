@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, User, BookOpen, Lightbulb } from "lucide-react";
 import { getBlogPost, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
+import { useMemo } from "react";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -40,6 +41,30 @@ const BlogPost = () => {
   const relatedPosts = blogPosts
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
+
+  // Generate table of contents from the markdown content
+  const tableOfContents = useMemo(() => {
+    const headings = post.content.match(/^#{2,3}\s+(.+)$/gm) || [];
+    return headings.map(heading => {
+      const level = heading.match(/^#+/)?.[0].length || 2;
+      const text = heading.replace(/^#+\s+/, '');
+      const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+      return { level, text, id };
+    });
+  }, [post.content]);
+
+  // Extract key takeaways (bold statements or first paragraph of each section)
+  const keyTakeaways = useMemo(() => {
+    const sections = post.content.split(/\n#{2,3}\s+/);
+    const takeaways: string[] = [];
+    sections.forEach(section => {
+      const firstPara = section.split('\n\n')[0];
+      if (firstPara && firstPara.length < 200 && firstPara.length > 30) {
+        takeaways.push(firstPara.replace(/\*\*/g, '').trim());
+      }
+    });
+    return takeaways.slice(0, 3);
+  }, [post.content]);
 
   return (
     <div className="min-h-screen">
@@ -107,27 +132,86 @@ const BlogPost = () => {
               </div>
             </div>
 
+            {/* Key Takeaways */}
+            {keyTakeaways.length > 0 && (
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-l-4 border-primary rounded-2xl p-8 mb-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <Lightbulb className="w-5 h-5 text-primary" />
+                  <h3 className="font-display text-xl font-bold text-foreground">Key Takeaways</h3>
+                </div>
+                <ul className="space-y-3">
+                  {keyTakeaways.map((takeaway, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="text-primary font-bold mt-1">•</span>
+                      <span>{takeaway}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Table of Contents */}
+            {tableOfContents.length > 0 && (
+              <div className="bg-card border-2 border-border rounded-2xl p-6 mb-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  <h3 className="font-display text-lg font-bold text-foreground">Table of Contents</h3>
+                </div>
+                <nav className="space-y-2">
+                  {tableOfContents.map((item, idx) => (
+                    <a
+                      key={idx}
+                      href={`#${item.id}`}
+                      className={`block text-sm hover:text-primary transition-colors ${
+                        item.level === 2 ? 'font-semibold text-foreground' : 'pl-4 text-muted-foreground'
+                      }`}
+                    >
+                      {item.text}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            )}
+
             {/* Article Body */}
             <div className="bg-card border border-border rounded-2xl p-8 md:p-12 mb-12 shadow-sm">
               <div className="prose prose-lg max-w-none
-                prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground
-                prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 prose-h1:border-b prose-h1:border-border prose-h1:pb-4
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-primary
-                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-secondary
-                prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-2
-                prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
-                prose-strong:text-foreground prose-strong:font-semibold prose-strong:bg-primary/5 prose-strong:px-1 prose-strong:rounded
-                prose-ul:text-muted-foreground prose-ul:my-6 prose-ul:space-y-2
-                prose-ol:text-muted-foreground prose-ol:my-6 prose-ol:space-y-2
-                prose-li:my-2 prose-li:leading-relaxed
-                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:bg-muted/30 prose-blockquote:py-2 prose-blockquote:my-6
+                prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-headings:scroll-mt-20
+                prose-h1:text-4xl prose-h1:mt-12 prose-h1:mb-6 prose-h1:border-b-2 prose-h1:border-primary/30 prose-h1:pb-4
+                prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:text-primary prose-h2:flex prose-h2:items-center prose-h2:gap-3
+                prose-h2:before:content-[''] prose-h2:before:w-1 prose-h2:before:h-8 prose-h2:before:bg-primary prose-h2:before:rounded
+                prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-foreground prose-h3:border-l-4 prose-h3:border-secondary prose-h3:pl-4
+                prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-secondary/80
+                prose-p:text-muted-foreground prose-p:leading-[1.8] prose-p:mb-6 prose-p:text-base
+                prose-strong:text-foreground prose-strong:font-bold prose-strong:bg-gradient-to-r prose-strong:from-primary/10 prose-strong:to-secondary/10 prose-strong:px-2 prose-strong:py-0.5 prose-strong:rounded
+                prose-ul:text-muted-foreground prose-ul:my-8 prose-ul:space-y-3 prose-ul:list-none
+                prose-ul>li:relative prose-ul>li:pl-6 prose-ul>li:before:content-['→'] prose-ul>li:before:absolute prose-ul>li:before:left-0 prose-ul>li:before:text-primary prose-ul>li:before:font-bold
+                prose-ol:text-muted-foreground prose-ol:my-8 prose-ol:space-y-3 prose-ol:list-none prose-ol:counter-reset-[item]
+                prose-ol>li:relative prose-ol>li:pl-8 prose-ol>li:counter-increment-[item] prose-ol>li:before:content-[counter(item)] prose-ol>li:before:absolute prose-ol>li:before:left-0 prose-ol>li:before:w-6 prose-ol>li:before:h-6 prose-ol>li:before:bg-primary/10 prose-ol>li:before:text-primary prose-ol>li:before:rounded-full prose-ol>li:before:flex prose-ol>li:before:items-center prose-ol>li:before:justify-center prose-ol>li:before:text-sm prose-ol>li:before:font-bold
+                prose-li:my-3 prose-li:leading-[1.8]
+                prose-blockquote:border-l-[6px] prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:pr-6 prose-blockquote:italic prose-blockquote:bg-gradient-to-r prose-blockquote:from-primary/5 prose-blockquote:to-transparent prose-blockquote:py-4 prose-blockquote:my-8 prose-blockquote:rounded-r-lg
                 prose-code:bg-muted prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:text-foreground
                 prose-pre:bg-muted prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto
                 prose-a:text-primary prose-a:no-underline prose-a:font-medium hover:prose-a:underline hover:prose-a:text-primary/80
                 prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
-                prose-hr:border-border prose-hr:my-8
+                prose-hr:border-border prose-hr:my-8 prose-hr:border-t-2
               ">
-                <ReactMarkdown>{post.content}</ReactMarkdown>
+                <ReactMarkdown
+                  components={{
+                    h2: ({ children, ...props }) => {
+                      const text = children?.toString() || '';
+                      const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+                      return <h2 id={id} {...props}>{children}</h2>;
+                    },
+                    h3: ({ children, ...props }) => {
+                      const text = children?.toString() || '';
+                      const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+                      return <h3 id={id} {...props}>{children}</h3>;
+                    },
+                  }}
+                >
+                  {post.content}
+                </ReactMarkdown>
               </div>
 
               {/* Author Card at Bottom */}

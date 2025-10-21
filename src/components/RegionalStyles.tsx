@@ -1,14 +1,18 @@
 import koreaImage from "@/assets/kbeauty-products.jpg";
+import koreaMaleImage from "@/assets/korean-male-fashion.jpg";
 import japanImage from "@/assets/japan-beauty-style.jpg";
+import japanMaleImage from "@/assets/japanese-male-style.jpg";
 import taiwanImage from "@/assets/taiwan-style.jpg";
+import taiwanMaleImage from "@/assets/taiwanese-male-fashion.jpg";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 
 const regions = [
   {
     name: "Korean Style",
     emoji: "🇰🇷",
     description: "K-beauty revolutionized skincare with the 10-step routine and innovative ingredients. Korean fashion blends feminine aesthetics with street style, creating the perfect 'cute but cool' vibe.",
-    image: koreaImage,
+    images: [koreaImage, koreaMaleImage],
     highlights: ["Glass Skin", "Cushion Compacts", "Oversized Fashion"],
     trend: "Dewy makeup, gradient lips, and minimalist chic clothing",
   },
@@ -16,7 +20,7 @@ const regions = [
     name: "Japanese Style",
     emoji: "🇯🇵",
     description: "J-beauty focuses on gentle, nourishing ingredients and simplicity. Japanese fashion ranges from Harajuku street style to timeless minimalism with impeccable quality and attention to detail.",
-    image: japanImage,
+    images: [japanImage, japanMaleImage],
     highlights: ["Mochi Skin", "Double Cleansing", "Layered Minimalism"],
     trend: "Natural makeup, healthy skin focus, and effortless elegance",
   },
@@ -24,13 +28,24 @@ const regions = [
     name: "Taiwanese Style",
     emoji: "🇹🇼",
     description: "Taiwanese beauty and fashion blend traditional and modern influences with a youthful, energetic approach. Known for fresh, natural looks and comfortable yet stylish casual wear.",
-    image: taiwanImage,
+    images: [taiwanImage, taiwanMaleImage],
     highlights: ["Fresh Face", "Bubble Tea Aesthetic", "Casual Chic"],
     trend: "Natural brows, coral lips, and relaxed streetwear",
   },
 ];
 
 const RegionalStyles = () => {
+  const [imageIndexes, setImageIndexes] = useState([0, 0, 0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndexes(prev => prev.map((index, i) => 
+        (index + 1) % regions[i].images.length
+      ));
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="fashion" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -51,9 +66,9 @@ const RegionalStyles = () => {
             >
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={region.image}
+                  src={region.images[imageIndexes[index]]}
                   alt={`${region.name}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                 />
                 <div className="absolute top-4 right-4 text-4xl">{region.emoji}</div>
               </div>
