@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <h3 className="font-display text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-              East Style
+              Asian Fashion
             </h3>
             <p className="text-muted-foreground mb-4 max-w-sm">
-              Your ultimate guide to Korean, Japanese, and Taiwanese fashion and beauty trends. Discover the secrets to K-beauty glass skin and East Asian style.
+              Your ultimate guide to Korean, Japanese, and Taiwanese fashion and beauty trends. Discover the secrets to K-beauty glass skin and Asian style for everyone.
             </p>
           </div>
           
