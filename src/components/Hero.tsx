@@ -1,11 +1,22 @@
-import heroImage from "@/assets/hero-beauty-fashion.jpg";
-import heroMaleImage from "@/assets/hero-male-fashion-beauty.jpg";
+import heroMenCasual from "@/assets/hero-men-casual-street.jpg";
+import heroMenFormal from "@/assets/hero-men-formal.jpg";
+import heroMenAthleisure from "@/assets/hero-men-athleisure.jpg";
+import heroWomenJFashion from "@/assets/hero-women-jfashion.jpg";
+import heroWomenStreet from "@/assets/hero-women-street.jpg";
+import heroWomenMinimalist from "@/assets/hero-women-minimalist.jpg";
 import { Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const heroImages = [heroImage, heroMaleImage];
+  const heroImages = [
+    heroMenCasual,
+    heroWomenJFashion,
+    heroMenFormal,
+    heroWomenStreet,
+    heroMenAthleisure,
+    heroWomenMinimalist
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

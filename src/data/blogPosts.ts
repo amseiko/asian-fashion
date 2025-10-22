@@ -11,6 +11,7 @@ export interface BlogPost {
   author: {
     name: string;
     bio: string;
+    avatar: string;
   };
 }
 
@@ -26,7 +27,8 @@ export const blogPosts: BlogPost[] = [
     image: "/src/assets/skincare-routine.jpg",
     author: {
       name: "Sophie Kim",
-      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines"
+      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
+      avatar: "/src/assets/profile-sophie-kim.jpg"
     },
     content: `
 # The Complete Guide to Korean Glass Skin (Yes, Even for Men!)
@@ -157,7 +159,8 @@ Now go forth and glow! ✨
     image: "/src/assets/japan-beauty-style.jpg",
     author: {
       name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate"
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      avatar: "/src/assets/profile-yuki-tanaka.jpg"
     },
     content: `
 # Japanese Minimalist Fashion: A Complete Style Guide for Everyone
@@ -383,7 +386,8 @@ Your future self (and your wallet) will thank you.
     image: "/src/assets/taiwan-style.jpg",
     author: {
       name: "Mei Lin Chen",
-      bio: "Taipei beauty blogger and T-beauty product reviewer"
+      bio: "Taipei beauty blogger and T-beauty product reviewer. Mei Lin is obsessed with all things cute, bubbly, and Instagram-worthy. Her bathroom cabinet is a science lab of bubble teas, milk serums, and experimental masks. She believes skincare should be fun, effective, and smell like dessert.",
+      avatar: "/src/assets/profile-mei-lin-chen.jpg"
     },
     content: `
 # Taiwanese Beauty Trends That'll Blow Your Mind in 2025
@@ -592,7 +596,8 @@ Mei Lin 💖
     image: "/src/assets/kbeauty-products.jpg",
     author: {
       name: "Sophie Kim",
-      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines"
+      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
+      avatar: "/src/assets/profile-sophie-kim.jpg"
     },
     content: `
 # K-Beauty vs J-Beauty: Which Philosophy Matches Your Vibe?
@@ -883,7 +888,8 @@ Now stop overthinking and just start!
     image: "/src/assets/hero-beauty-fashion.jpg",
     author: {
       name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate"
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      avatar: "/src/assets/profile-yuki-tanaka.jpg"
     },
     content: `
 # How to Style Oversized Fashion Like an Asian Street Style Pro
@@ -1196,7 +1202,8 @@ And remember—fashion rules are guidelines, not law. If you feel good and look 
     image: "/src/assets/skincare-routine.jpg",
     author: {
       name: "Dr. Hannah Park",
-      bio: "Dermatologist and sunscreen formulation expert based in Seoul"
+      bio: "Dermatologist and sunscreen formulation expert based in Seoul. Dr. Park is on a mission to end sun damage one SPF bottle at a time. She's formulated award-winning sunscreens and genuinely gets excited about UV filters. Her colleagues joke she's never seen without SPF, even indoors (it's true).",
+      avatar: "/src/assets/profile-dr-hannah-park.jpg"
     },
     content: `
 # The Ultimate Guide to Asian Sunscreens (Yes, They're Better)
@@ -1502,7 +1509,8 @@ Stop making excuses. Protect your skin. Your 60-year-old self will thank you.
     image: "/src/assets/makeup-trends.jpg",
     author: {
       name: "Mei Lin Chen",
-      bio: "Taipei beauty blogger and T-beauty product reviewer"
+      bio: "Taipei beauty blogger and T-beauty product reviewer. Mei Lin is obsessed with all things cute, bubbly, and Instagram-worthy. Her bathroom cabinet is a science lab of bubble teas, milk serums, and experimental masks. She believes skincare should be fun, effective, and smell like dessert.",
+      avatar: "/src/assets/profile-mei-lin-chen.jpg"
     },
     content: `
 # Asian Makeup Trends for Beginners: Master the Basics
@@ -1897,6 +1905,715 @@ Now go practice! And send me your before/afters! 💄
 
 **P.S.** Follow me for more tutorials and honest product reviews!
     `
+  },
+  {
+    id: "8",
+    title: "K-Beauty Skincare Trends Dominating 2025",
+    slug: "k-beauty-skincare-trends-2025",
+    excerpt: "From barrier-repairing ceramides to ultra-hydrating hyaluronic bombs—here's what's actually worth the hype this year.",
+    category: "Skincare",
+    date: "2025-10-15",
+    readTime: "9 min read",
+    image: "/src/assets/kbeauty-products.jpg",
+    author: {
+      name: "Dr. Hannah Park",
+      bio: "Dermatologist and sunscreen formulation expert based in Seoul. Dr. Park is on a mission to end sun damage one SPF bottle at a time. She's formulated award-winning sunscreens and genuinely gets excited about UV filters. Her colleagues joke she's never seen without SPF, even indoors (it's true).",
+      avatar: "/src/assets/profile-dr-hannah-park.jpg"
+    },
+    content: \`
+# K-Beauty Skincare Trends Dominating 2025
+
+Hey there, skincare addicts! Dr. Hannah Park here, and I'm literally buzzing with excitement over what's happening in K-beauty right now. After reviewing hundreds of new formulations this year, I can confidently say we're experiencing a MAJOR shift in how we approach skincare.
+
+Gone are the days of 10-step routines that take 45 minutes. 2025 is all about **smart, targeted, science-backed products** that actually deliver results. Let me break down what's trending—and what's actually worth your money.
+
+## Trend #1: Barrier Repair is EVERYTHING
+
+If your skincare routine isn't focused on skin barrier health in 2025, you're already behind. Climate change, pollution, over-exfoliation—your skin barrier is under attack from all angles.
+
+### The Star Ingredient: Ceramides
+
+**[Dr. Jart+ Ceramidin Cream (~$47.90)](https://www.yesstyle.com/en/dr-jart-ceramidin-cream-50ml/info.html/pid.1056789123)** - This is the gold standard barrier-repairing moisturizer. I recommend this to literally 80% of my patients.
+
+**Why it works:** Ceramides are the "cement" between your skin cells. When that cement crumbles (from harsh products, aging, or environmental stress), you get sensitivity, dryness, and premature aging. This cream rebuilds that cement.
+
+**Best for:** Anyone with compromised skin barrier, redness, sensitivity, or chronic dryness. Especially amazing for post-procedure healing.
+
+## Trend #2: Low-Molecular Hyaluronic Acid
+
+Everyone talks about hyaluronic acid, but SIZE MATTERS. Regular HA sits on your skin's surface. Low-molecular HA penetrates deep into the dermis, delivering hydration where you actually need it.
+
+### The Game-Changer
+
+**[Torriden Dive In Low Molecular Hyaluronic Acid Serum (~$21.90)](https://www.yesstyle.com/en/torriden-dive-in-low-molecular-hyaluronic-acid-serum-50ml/info.html/pid.1113456789)** - Hands down, the best value in K-beauty right now.
+
+**The science:** Contains 5 types of hyaluronic acid in different molecular weights. The smallest molecules penetrate up to 10 layers deep in your skin. This is REAL hydration, not just surface-level dewiness.
+
+**How to use:**
+- Apply to damp skin (this is KEY!)
+- Press—don't rub—into skin
+- Layer under your moisturizer for maximum effect
+
+**Pro tip:** Use this BEFORE your barrier cream (like Dr. Jart+) for the ultimate hydration-lock combo.
+
+## Trend #3: Gentle Actives for Sensitive Skin
+
+The pendulum is swinging away from aggressive actives (looking at you, 20% vitamin C serums). 2025 is about **effective but gentle** formulations that don't destroy your skin barrier in the process.
+
+### Propolis + Niacinamide: The Power Couple
+
+I'm seeing incredible results with this combination—brightening without irritation, glow without greasiness.
+
+**Personal favorite:** Beauty of Joseon products nail this balance perfectly. Their formulations are clinically backed but still gentle enough for daily use.
+
+## Trend #4: Fermented Ingredients
+
+Fermentation has been a K-beauty staple for years, but in 2025, it's getting a scientific upgrade. Fermented ingredients have smaller molecular sizes and enhanced bioavailability—which means better absorption and more powerful results.
+
+**What to look for:**
+- Fermented yeast extracts (galactomyces)
+- Bifida ferment lysate
+- Lactobacillus ferment
+
+These ingredients brighten, strengthen barrier function, and deliver probiotics that support your skin's microbiome.
+
+## Trend #5: SPF Innovation
+
+As a sunscreen scientist, THIS is where I get really excited. Korean SPF formulations are light-years ahead of Western ones.
+
+### What Makes Korean Sunscreens Superior?
+
+1. **Chemical filters** that don't leave white casts
+2. **Lightweight textures** that feel like moisturizers
+3. **High PPD ratings** (actual UVA protection, not just SPF numbers)
+4. **Cosmetic elegance** - they actually play well under makeup!
+
+**My daily SPF:** I rotate between several Korean formulas, all SPF 50+ with PA++++. No greasiness, no pilling, just invisible protection.
+
+## How to Build a 2025-Ready Routine
+
+Here's my dermatologist-approved minimalist routine:
+
+**Morning:**
+1. Gentle cleanser
+2. **Torriden HA Serum** (on damp skin)
+3. **Dr. Jart+ Ceramidin Cream**
+4. SPF 50+ PA++++
+
+**Evening:**
+1. Double cleanse
+2. **Torriden HA Serum**
+3. Targeted treatment (retinol, niacinamide, etc.)
+4. **Dr. Jart+ Ceramidin Cream**
+
+That's it. 4-5 steps, maximum results, minimal barrier disruption.
+
+## What's NOT Trending (Thank God)
+
+❌ Over-exfoliating with daily acids  
+❌ 10-step routines that take 45 minutes  
+❌ Harsh physical scrubs  
+❌ Essential oils that irritate sensitive skin  
+❌ "Natural" products with zero science backing
+
+## The Bottom Line
+
+2025 K-beauty is about **smart skincare**, not just more skincare. Invest in barrier repair, hydration, and sun protection. Everything else is secondary.
+
+**Shop the featured products:**
+- [Dr. Jart+ Ceramidin Cream](https://www.yesstyle.com/en/dr-jart-ceramidin-cream-50ml/info.html/pid.1056789123) - $47.90
+- [Torriden Dive In Serum](https://www.yesstyle.com/en/torriden-dive-in-low-molecular-hyaluronic-acid-serum-50ml/info.html/pid.1113456789) - $21.90
+
+Trust the science, protect your barrier, and your skin will thank you.
+
+*Dr. Hannah Park, MD*
+
+**P.S.** Got questions? Drop them in the comments! I love nerding out about ingredient science. 🧪
+    \`
+  },
+  {
+    id: "9",
+    title: "Seoul Street Fashion Lookbook: Winter 2025 Edition",
+    slug: "seoul-street-fashion-lookbook-2025",
+    excerpt: "From Gangnam to Hongdae—I'm breaking down the coolest street style looks taking over Seoul this season.",
+    category: "Fashion",
+    date: "2025-10-12",
+    readTime: "8 min read",
+    image: "/src/assets/seoul-street-scene.jpg",
+    author: {
+      name: "Yuki Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+    },
+    content: \`
+# Seoul Street Fashion Lookbook: Winter 2025 Edition
+
+What's up, style seekers! I just spent two weeks wandering the streets of Seoul, and let me tell you—the fashion game here is UNMATCHED. From Gangnam's polished looks to Hongdae's edgy experimental vibes, Seoul is serving looks that are equal parts aspirational and actually wearable.
+
+Let me break down the top trends I'm seeing everywhere, plus how to recreate these looks without dropping your entire paycheck.
+
+## The Oversized Streetwear Wave
+
+Seoul's street style has always embraced oversized silhouettes, but this season it's reaching new heights. Think: **drowning in fabric but make it fashion**.
+
+### Look #1: The Graphic Hoodie Hero
+
+**[Chuu Oversized Graphic Hoodie (~$34.90)](https://www.yesstyle.com/en/chuu-oversized-graphic-hoodie-gray/info.html/pid.1098765432)** - This is the piece I see on repeat in Hongdae. Bold graphics, dropped shoulders, and that perfect "borrowed from your older sibling" vibe.
+
+**How to style it:**
+- Pair with **[8Seconds Cargo Pants (~$39.90)](https://www.yesstyle.com/en/8seconds-cargo-pants-khaki/info.html/pid.1112345678)** for the full Seoul streetwear effect
+- Add chunky sneakers (New Balance or Salomon vibes)
+- Layer a long coat over for dimension
+
+**Pro tip:** The hoodie should hit mid-thigh. If it's shorter, size up!
+
+### Why This Works
+
+Oversized pieces create visual interest through proportion play. The key is **intentional imbalance**—one oversized piece balanced with something more fitted (or at least tapered at the ankles).
+
+## The Utilitarian Edge
+
+Military-inspired details are HUGE right now. Cargo pockets, adjustable straps, technical fabrics—Seoul is bringing function to fashion.
+
+### Look #2: Cargo Everything
+
+Those **8Seconds Cargo Pants** I mentioned? They're not just a supporting player—they're the main event. I saw them styled 47 different ways (yes, I counted).
+
+**Styling variations:**
+1. **Casual Cool:** Graphic tee + windbreaker + cargo pants + dad sneakers
+2. **Smart Casual:** Black turtleneck + blazer + cargo pants + leather boots
+3. **Full Utilitarian:** Tactical vest + cargo pants + technical outerwear
+
+**The fabric matters:** Look for cotton-blend cargos with a slight structure. Too stiff = costume. Too soft = pajamas.
+
+## The Athletic Aesthetic
+
+Korean street style has mastered the art of looking sporty without actually going to the gym. It's athleisure, but make it FASHION.
+
+### Look #3: The Technical Jacket
+
+I'm obsessed with how Seoulites layer technical jackets over everything—suits, dresses, hoodies, you name it.
+
+**Shop this vibe:** Lightweight windbreakers with interesting details—asymmetrical zips, reflective panels, color-blocking.
+
+**Styling secret:** Pair sporty pieces with non-sporty items for contrast:
+- Windbreaker + dress pants + loafers
+- Athletic jacket + midi skirt + boots
+- Track pants + tailored coat + Chelsea boots
+
+## Color Theory: Seoul Edition
+
+Here's what I'm seeing dominate the color palette:
+
+**Neutral Base:** Black, gray, beige, khaki (the foundation)  
+**Pop Colors:** Orange, yellow, forest green (the accent)  
+**Monochrome Moments:** All-black everything or tonal dressing
+
+**The formula:** 80% neutrals, 20% statement color. Don't overthink it.
+
+## Layering Like a Seoul Local
+
+Winter in Seoul is COLD. But locals have mastered the art of staying warm without looking like a marshmallow.
+
+### The Layering Blueprint
+
+**Base:** Thermal underlay or fitted long-sleeve  
+**Mid:** Hoodie or sweater  
+**Outer:** Oversized coat or puffer  
+**Accessories:** Chunky scarf, beanie, gloves
+
+**The trick:** Each layer should be slightly looser than the last. This creates visual flow and prevents the dreaded "stuffed sausage" look.
+
+## Footwear That Actually Makes Sense
+
+Seoul streets = lots of walking. Fashion is important, but blisters are not cute.
+
+**What everyone's wearing:**
+- Chunky sneakers (New Balance 530, Salomon XT-6, Nike Dunks)
+- Chelsea boots (sleek, weather-resistant)
+- Combat boots (edgy but practical)
+
+**What you won't see:** Heels. Seriously, save those for indoor venues.
+
+## Accessories: The Seoul Way
+
+Koreans understand that accessories make or break an outfit.
+
+**Must-haves:**
+- **Crossbody bag** (hands-free is key)
+- **Minimal jewelry** (think: one statement piece, not ten)
+- **Caps and beanies** (practical + stylish)
+- **Technical gloves** (touchscreen compatible!)
+
+## How to Recreate These Looks
+
+Start with these wardrobe essentials:
+
+1. **[Chuu Oversized Graphic Hoodie](https://www.yesstyle.com/en/chuu-oversized-graphic-hoodie-gray/info.html/pid.1098765432)** - $34.90
+2. **[8Seconds Cargo Pants](https://www.yesstyle.com/en/8seconds-cargo-pants-khaki/info.html/pid.1112345678)** - $39.90
+3. A quality oversized coat (neutral color)
+4. Chunky sneakers (invest here—they'll last)
+5. Minimal accessories (less is more)
+
+**Total investment:** Under $200 for a foundation wardrobe that'll take you through the entire season.
+
+## The Seoul Street Style Mindset
+
+Here's what separates Seoul fashion from everywhere else:
+
+✓ **Comfort is non-negotiable** - If you can't walk 10,000 steps in it, don't wear it  
+✓ **Confidence > Perfection** - Own your look, even if it's experimental  
+✓ **Function meets form** - Everything should have a purpose  
+✓ **Personal style > trends** - Use trends as inspiration, not a uniform
+
+## Final Thoughts
+
+Seoul street fashion isn't about copying looks—it's about understanding the principles and making them your own. Oversized proportions, utilitarian details, athletic influences, and smart layering. Master these four elements, and you'll look like you stepped off a Seoul subway (in the best way possible).
+
+**Shop the Seoul street style essentials:**
+- [Chuu Oversized Graphic Hoodie - $34.90](https://www.yesstyle.com/en/chuu-oversized-graphic-hoodie-gray/info.html/pid.1098765432)
+- [8Seconds Cargo Pants - $39.90](https://www.yesstyle.com/en/8seconds-cargo-pants-khaki/info.html/pid.1112345678)
+
+Now go forth and dress like the Seoul local you were always meant to be.
+
+*Yuki*
+
+**P.S.** I'll be dropping a Tokyo street style comparison next month. Stay tuned!
+    \`
+  },
+  {
+    id: "10",
+    title: "Japanese Minimalist Wardrobe: The 33-Item Guide",
+    slug: "japanese-minimalist-wardrobe-33-item-guide",
+    excerpt: "Everything you need to build a timeless, versatile wardrobe that actually works. No clutter, no regrets, just clean style.",
+    category: "Fashion",
+    date: "2025-10-08",
+    readTime: "10 min read",
+    image: "/src/assets/tokyo-street-scene.jpg",
+    author: {
+      name: "Yuki Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+    },
+    content: \`
+# Japanese Minimalist Wardrobe: The 33-Item Guide
+
+Okay, let's have a real talk. How many items are in your closet right now? 100? 200? More?
+
+Now, how many of those do you *actually* wear regularly? 20? 30?
+
+Yeah. That's the problem.
+
+I'm Yuki, and for the past five years, I've lived with exactly 33 wardrobe items per season (not including underwear, workout clothes, or loungewear). It's a Japanese minimalist philosophy called a "capsule wardrobe," and it's completely transformed how I dress, save money, and present myself to the world.
+
+Let me show you how to build yours.
+
+## Why 33 Items?
+
+It's enough to create dozens of outfits without feeling restricted, but small enough to force intentionality with every purchase.
+
+**The philosophy:** Every item should be:
+- **Versatile** - Works with multiple other pieces
+- **Quality** - Built to last seasons, not weeks
+- **Loved** - You genuinely enjoy wearing it
+- **Functional** - Serves a real purpose in your life
+
+If it doesn't check all four boxes, it doesn't belong in your closet.
+
+## The Japanese Minimalist Aesthetic
+
+Before we dive into the specific items, let's talk about the vibe we're going for:
+
+- **Clean lines** - No excessive details or embellishments
+- **Neutral colors** - Black, white, gray, beige, navy
+- **Quality fabrics** - Linen, cotton, wool—natural materials that age gracefully
+- **Timeless silhouettes** - These pieces should look good in 5 years
+- **Perfect fit** - Tailoring is KEY
+
+Think: **understated elegance**. You want people to notice YOU, not your clothes screaming for attention.
+
+## The 33-Item Breakdown
+
+### TOPS (12 items)
+
+**White Button-Downs (2)**
+- **[Andemiu Linen Blend Shirt (~$27.90)](https://www.yesstyle.com/en/andemiu-linen-blend-shirt-white/info.html/pid.1078901234)** - Breathable, versatile, classic. This is your wardrobe workhorse.
+
+Wear it with:
+- Tailored trousers for work
+- Jeans for weekend casual
+- Under a sweater for layering
+
+**Basic Tees (4)**
+- 2 white, 2 black
+- Crew neck or v-neck (pick one and stick with it for consistency)
+- High-quality cotton—cheaper tees lose shape after 5 washes
+
+**Knit Sweaters (3)**
+- 1 black crewneck
+- 1 gray turtleneck  
+- 1 beige cardigan
+
+**Long-Sleeves (3)**
+- Neutral colors (black, gray, navy)
+- Fitted but not tight
+
+### BOTTOMS (8 items)
+
+**Trousers (4)**
+- **[Journal Standard Wide-Leg Trousers (~$54.90)](https://www.yesstyle.com/en/journal-standard-wide-leg-trousers-black/info.html/pid.1123456789)** - This is the silhouette Japanese minimalists LIVE in.
+
+**Why wide-leg?** 
+- Flattering on every body type
+- More comfortable than skinny pants
+- Inherently elegant and timeless
+- Pairs with both sneakers and dress shoes
+
+**Other trousers:**
+- 1 charcoal gray
+- 1 navy blue
+- 1 beige/khaki
+
+**Jeans (2)**
+- 1 black (straight or slim)
+- 1 indigo (classic mid-wash)
+
+**Shorts (2)**
+- For summer or casual weekends
+- Tailored, above-knee length
+- Neutral colors
+
+### OUTERWEAR (5 items)
+
+**Coats (3)**
+- Long wool coat (camel or black)
+- Trench coat (versatile for rain and shine)
+- Denim or bomber jacket (casual layer)
+
+**Blazers (2)**
+- 1 black (formal)
+- 1 unstructured linen blend (casual)
+
+### FOOTWEAR (5 items)
+
+- White leather sneakers (wear with EVERYTHING)
+- Black Chelsea boots (dress up or down)
+- Brown leather loafers (smart casual)
+- Sandals (summer only)
+- One pair of "fun" shoes (your personality peek)
+
+### ACCESSORIES (3 items)
+
+- Leather belt (black or brown)
+- Watch or bracelet (one statement piece)
+- Minimal bag (leather crossbody or backpack)
+
+## The Color Palette Strategy
+
+Here's the secret to making 33 items feel like infinite outfits: **stick to a cohesive color palette**.
+
+**My palette:**
+- **Base:** Black, white, gray
+- **Accents:** Navy, beige, olive
+- **Optional pop:** Rust or burgundy
+
+**The rule:** Everything should coordinate with at least 70% of your other pieces.
+
+## Shopping Rules to Maintain 33 Items
+
+Once you hit 33, the only way to add something new is to remove something old. This forces you to be BRUTALLY intentional about purchases.
+
+**Before buying, ask yourself:**
+1. What will I wear this with? (Name 3 specific outfits)
+2. Do I already own something similar?
+3. Will I still love this in 2 years?
+4. What will I remove to make room for this?
+
+If you can't confidently answer all four, PUT IT BACK.
+
+## How to Build Your Capsule Wardrobe
+
+**Step 1: Audit Your Current Closet**
+- Take EVERYTHING out
+- Try it all on (yes, really)
+- Create three piles: LOVE, MAYBE, DONATE
+
+**Step 2: Keep Only What You Love**
+- Be ruthless with the MAYBE pile
+- If you haven't worn it in 6 months, it goes
+
+**Step 3: Identify Gaps**
+- What's missing for your lifestyle?
+- Do you need more work clothes? Casual pieces?
+
+**Step 4: Shop Intentionally**
+- Start with basics, add personality later
+- Invest in quality for frequently worn items
+- Don't rush—building a capsule takes time
+
+## The Japanese Wardrobe Essentials to Start With
+
+If you're starting from scratch, begin here:
+
+1. **[Andemiu Linen Blend Shirt - $27.90](https://www.yesstyle.com/en/andemiu-linen-blend-shirt-white/info.html/pid.1078901234)** - Your everyday workhorse
+2. **[Journal Standard Wide-Leg Trousers - $54.90](https://www.yesstyle.com/en/journal-standard-wide-leg-trousers-black/info.html/pid.1123456789)** - Instantly elevates any look
+3. Quality white tees (2-pack)
+4. Black crewneck sweater
+5. Dark indigo jeans
+
+**Total investment:** ~$200 for 5 core pieces that'll carry 80% of your outfits.
+
+## Living With 33 Items: The Reality
+
+**What I love:**
+- Getting dressed takes 5 minutes
+- Everything matches everything
+- I know I look good every day
+- Way more money for experiences vs. stuff
+- Zero "I have nothing to wear" moments
+
+**What's challenging:**
+- Resisting impulse purchases (it gets easier)
+- Seasonal transitions require swapping items in/out
+- Social pressure to "keep up" with trends
+
+**Is it worth it?** 1000% yes.
+
+## Final Thoughts
+
+Japanese minimalist fashion isn't about deprivation—it's about **intentionality**. It's choosing quality over quantity. It's dressing with purpose.
+
+You don't need 200 items to express yourself. You need 33 items you actually love.
+
+**Ready to start?** Pick 5 pieces from your current closet that you LOVE. Wear only those for one week. Notice how freeing it feels. That's the minimalist magic.
+
+**Shop the minimalist essentials:**
+- [Andemiu Linen Blend Shirt - $27.90](https://www.yesstyle.com/en/andemiu-linen-blend-shirt-white/info.html/pid.1078901234)
+- [Journal Standard Wide-Leg Trousers - $54.90](https://www.yesstyle.com/en/journal-standard-wide-leg-trousers-black/info.html/pid.1123456789)
+
+Less clutter, more clarity. That's the Japanese way.
+
+*Yuki*
+
+**P.S.** Questions about building your capsule? Drop a comment! I love helping people declutter their closets (and their minds).
+    \`
+  },
+  {
+    id: "11",
+    title: "K-Fashion for Fall/Winter: Your Ultimate Guide",
+    slug: "k-fashion-fall-winter-ultimate-guide",
+    excerpt: "Oversized coats, cozy knits, and K-drama-worthy outfits. Here's how to nail Korean winter fashion without freezing your butt off.",
+    category: "Fashion",
+    date: "2025-10-05",
+    readTime: "9 min read",
+    image: "/src/assets/korean-male-fashion.jpg",
+    author: {
+      name: "Sophie Kim",
+      bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
+      avatar: "/src/assets/profile-sophie-kim.jpg"
+    },
+    content: \`
+# K-Fashion for Fall/Winter: Your Ultimate Guide
+
+Hey fashion lovers! Sophie here, and yes, I usually talk about skincare, but let's be real—glass skin means nothing if your outfit is giving "I gave up." Seoul winters are BRUTAL, but Korean fashion has mastered the art of looking effortlessly chic while staying warm. Let me share my favorite fall/winter K-fashion essentials.
+
+## The Oversized Coat: Your New Best Friend
+
+If K-dramas have taught us anything, it's that a killer coat makes the outfit. Forget fitted—oversized is where it's at.
+
+### The Camel Coat
+
+**[Stilclass Wool Blend Coat (~$119.90)](https://www.yesstyle.com/en/stilclass-wool-blend-coat-camel/info.html/pid.1145678901)** - This is THE coat you see in every K-drama. Oversized, luxurious, and makes you look like you have your life together (even if you don't).
+
+**Why this coat works:**
+- Versatile AF - dress it up or down
+- That perfect K-drama leading lady vibe
+- Warm enough for real winter
+- Hides literally any outfit underneath (life hack)
+
+**How to style it:**
+- Over jeans + sweater for weekend errands
+- With wide-leg trousers for work
+- Thrown over a dress for date night
+- With joggers and sneakers for "model off-duty" vibes
+
+**The fit:** Should hit mid-calf or lower. Shoulders should be dropped (that's the oversized look we want). Sleeves covering your hands? *Chef's kiss*.
+
+## Cozy Knits That Actually Look Good
+
+Korean knitwear is on another level. Soft, oversized, but somehow still flattering.
+
+### The Sweater Dress
+
+**[A'pieu Knit Sweater Dress (~$31.90)](https://www.yesstyle.com/en/a-pieu-knit-sweater-dress-gray/info.html/pid.1101234567)** - This dress changed my life. Comfortable as pajamas, cute as actual fashion.
+
+**The genius of this piece:**
+- One-and-done outfit (no thinking required)
+- Pair with tights + boots = instant outfit
+- Layer under your coat = bonus warmth
+- Fitted turtleneck = elegant, not frumpy
+
+**Styling tips:**
+- Belt it at the waist for definition
+- Add a long coat over it for proportions
+- Wear with knee-high boots (this is KEY)
+- Keep accessories minimal—the dress is the statement
+
+**Color strategy:** Stick with neutrals (gray, black, cream, camel). These colors dominate K-fashion for a reason—they're timeless, versatile, and always look expensive.
+
+## Layering Like a Korean Fashion Pro
+
+Seoul winter = LAYERS. But not just any layers—strategic, stylish layers that don't make you look like the Michelin Man.
+
+### The Layering Formula
+
+**Base:** Thermal or fitted long-sleeve  
+**Mid-Layer:** Knit sweater or turtleneck  
+**Outer-Layer:** Oversized coat  
+**Accessories:** Scarf, beanie, gloves
+
+**Pro tip:** Each layer should be progressively looser to maintain that coveted "effortless" look.
+
+## The Color Palette: K-Fashion Fall/Winter Edition
+
+Korean fashion leans HARD into neutrals during colder months. Here's your palette:
+
+**Primary Colors:**
+- Black (obviously)
+- Gray (all shades)
+- Camel/beige
+- Cream/white
+
+**Accent Colors:**
+- Navy
+- Burgundy
+- Forest green
+
+**The rule:** Build your outfit around neutrals, then add ONE accent color if you're feeling spicy.
+
+## Footwear That Makes Sense
+
+Let's talk shoes. Korean streets in winter = you need traction, warmth, and style.
+
+**The winners:**
+- **Chelsea boots** - sleek, versatile, easy on/off
+- **Combat boots** - edgy but practical
+- **Chunky sneakers** - for casual days
+- **Knee-high boots** - pair with dresses/skirts
+
+**What to avoid:** Heels (unless you want to slip on ice), flimsy sneakers, anything without proper insulation.
+
+## Accessories: The Finishing Touch
+
+Koreans understand that accessories complete the look. But remember: less is more.
+
+**Must-Haves:**
+- **Oversized scarf** - doubles as warmth and style statement
+- **Beanie or beret** - keeps head warm, adds Parisian flair
+- **Minimal bag** - crossbody or structured tote
+- **Gloves** - functional, yes, but also cute touchscreen-compatible ones exist
+
+**Jewelry:** Keep it minimal. One statement earring, a simple necklace, or a watch. Not all three.
+
+## How to Build Your K-Fashion Fall/Winter Capsule
+
+If you're starting from scratch, here are the essentials:
+
+### The Foundation (Invest Here)
+
+1. **[Stilclass Wool Blend Coat - $119.90](https://www.yesstyle.com/en/stilclass-wool-blend-coat-camel/info.html/pid.1145678901)** - Your outfit maker
+2. **[A'pieu Knit Sweater Dress - $31.90](https://www.yesstyle.com/en/a-pieu-knit-sweater-dress-gray/info.html/pid.1101234567)** - Easy, chic, versatile
+3. Black turtleneck (multiple, trust me)
+4. Wide-leg trousers (black, gray, or camel)
+5. Quality boots (Chelsea or combat)
+
+**Total investment:** ~$300-400 for 5 core pieces that'll carry you through the entire season.
+
+### The Supporting Cast (Add These Next)
+
+- Cropped knit sweaters
+- Fitted jeans (black or indigo)
+- Wool scarf
+- Beanie
+- Crossbody bag
+
+## 5 Easy K-Fashion Fall Outfits
+
+Let me make this super simple. Here are 5 outfits you can create with the pieces above:
+
+**Outfit 1: Weekend Casual**
+- A'pieu sweater dress
+- Tights + combat boots
+- Stilclass coat
+- Beanie + crossbody bag
+
+**Outfit 2: Coffee Date**
+- Black turtleneck
+- Wide-leg trousers
+- Chelsea boots
+- Minimal jewelry
+
+**Outfit 3: Running Errands But Make It Fashion**
+- Oversized sweater
+- Black jeans
+- Chunky sneakers
+- Stilclass coat
+- Beanie
+
+**Outfit 4: Dinner Plans**
+- A'pieu sweater dress (belted at waist)
+- Knee-high boots
+- Statement coat
+- Drop earrings
+
+**Outfit 5: The "I'm Late But Need To Look Good"**
+- Black turtleneck
+- Black trousers
+- Stilclass coat
+- Boots
+- Scarf
+
+Congratulations, you now have 5 outfits that'll make you look like you just stepped out of Itaewon.
+
+## Shopping Strategy: Don't Go Broke
+
+K-fashion can get expensive, so here's how to shop smart:
+
+**Splurge on:**
+- Your coat (you'll wear it daily)
+- Boots (quality = longevity)
+- One perfect knit piece
+
+**Save on:**
+- Basic layering pieces
+- Accessories
+- Trendy items you'll tire of
+
+**Where to shop:** YesStyle has incredible options at every price point. Start there.
+
+## The K-Fashion Mindset
+
+Here's what separates K-fashion from other styles:
+
+✓ **Comfort comes first** - If it's uncomfortable, it's not worth it  
+✓ **Neutral palette = timeless** - You can't go wrong with beige and black  
+✓ **Proportions matter** - Oversized paired with fitted, not baggy + baggy  
+✓ **Quality > quantity** - One great coat beats ten cheap ones
+
+## Final Thoughts
+
+K-fashion fall/winter isn't about following every trend—it's about building a wardrobe of quality basics that work together effortlessly. Invest in that killer coat, find your perfect knit dress, and master the art of layering. You'll look chic, stay warm, and feel like a K-drama protagonist (which is the ultimate goal, let's be honest).
+
+**Shop the K-fashion essentials:**
+- [Stilclass Wool Blend Coat - $119.90](https://www.yesstyle.com/en/stilclass-wool-blend-coat-camel/info.html/pid.1145678901)
+- [A'pieu Knit Sweater Dress - $31.90](https://www.yesstyle.com/en/a-pieu-knit-sweater-dress-gray/info.html/pid.1101234567)
+
+Now go forth and dress like the Seoul fashionista you were meant to be!
+
+*Sophie 💕*
+
+**P.S.** Want skincare tips to pair with your killer outfit? Check out my other posts! Glass skin + great fashion = unstoppable.
+    \`
   }
 ];
 
