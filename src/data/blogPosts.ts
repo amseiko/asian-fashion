@@ -1920,7 +1920,7 @@ Now go practice! And send me your before/afters! 💄
       bio: "Dermatologist and sunscreen formulation expert based in Seoul. Dr. Park is on a mission to end sun damage one SPF bottle at a time. She's formulated award-winning sunscreens and genuinely gets excited about UV filters. Her colleagues joke she's never seen without SPF, even indoors (it's true).",
       avatar: "/src/assets/profile-dr-hannah-park.jpg"
     },
-    content: \`
+    content: `
 # K-Beauty Skincare Trends Dominating 2025
 
 Hey there, skincare addicts! Dr. Hannah Park here, and I'm literally buzzing with excitement over what's happening in K-beauty right now. After reviewing hundreds of new formulations this year, I can confidently say we're experiencing a MAJOR shift in how we approach skincare.
@@ -2029,7 +2029,7 @@ Trust the science, protect your barrier, and your skin will thank you.
 *Dr. Hannah Park, MD*
 
 **P.S.** Got questions? Drop them in the comments! I love nerding out about ingredient science. 🧪
-    \`
+    `
   },
   {
     id: "9",
@@ -2045,7 +2045,7 @@ Trust the science, protect your barrier, and your skin will thank you.
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: "/src/assets/profile-yuki-tanaka.jpg"
     },
-    content: \`
+    content: `
 # Seoul Street Fashion Lookbook: Winter 2025 Edition
 
 What's up, style seekers! I just spent two weeks wandering the streets of Seoul, and let me tell you—the fashion game here is UNMATCHED. From Gangnam's polished looks to Hongdae's edgy experimental vibes, Seoul is serving looks that are equal parts aspirational and actually wearable.
@@ -2179,7 +2179,7 @@ Now go forth and dress like the Seoul local you were always meant to be.
 *Yuki*
 
 **P.S.** I'll be dropping a Tokyo street style comparison next month. Stay tuned!
-    \`
+    `
   },
   {
     id: "10",
@@ -2195,7 +2195,7 @@ Now go forth and dress like the Seoul local you were always meant to be.
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: "/src/assets/profile-yuki-tanaka.jpg"
     },
-    content: \`
+    content: `
 # Japanese Minimalist Wardrobe: The 33-Item Guide
 
 Okay, let's have a real talk. How many items are in your closet right now? 100? 200? More?
@@ -2396,7 +2396,7 @@ Less clutter, more clarity. That's the Japanese way.
 *Yuki*
 
 **P.S.** Questions about building your capsule? Drop a comment! I love helping people declutter their closets (and their minds).
-    \`
+    `
   },
   {
     id: "11",
@@ -2412,7 +2412,7 @@ Less clutter, more clarity. That's the Japanese way.
       bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
       avatar: "/src/assets/profile-sophie-kim.jpg"
     },
-    content: \`
+    content: `
 # K-Fashion for Fall/Winter: Your Ultimate Guide
 
 Hey fashion lovers! Sophie here, and yes, I usually talk about skincare, but let's be real—glass skin means nothing if your outfit is giving "I gave up." Seoul winters are BRUTAL, but Korean fashion has mastered the art of looking effortlessly chic while staying warm. Let me share my favorite fall/winter K-fashion essentials.
@@ -2613,7 +2613,7 @@ Now go forth and dress like the Seoul fashionista you were meant to be!
 *Sophie 💕*
 
 **P.S.** Want skincare tips to pair with your killer outfit? Check out my other posts! Glass skin + great fashion = unstoppable.
-    \`
+    `
   }
 ];
 
