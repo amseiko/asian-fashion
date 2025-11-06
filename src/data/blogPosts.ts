@@ -1,3 +1,20 @@
+// Import all images
+import skincareRoutineImage from "@/assets/skincare-routine.jpg";
+import kbeautyProductsImage from "@/assets/kbeauty-products.jpg";
+import taiwanStyleImage from "@/assets/taiwan-style.jpg";
+import japanBeautyStyleImage from "@/assets/japan-beauty-style.jpg";
+import makeupTrendsImage from "@/assets/makeup-trends.jpg";
+import tokyoStreetSceneImage from "@/assets/tokyo-street-scene.jpg";
+import seoulStreetSceneImage from "@/assets/seoul-street-scene.jpg";
+import koreanMaleFashionImage from "@/assets/korean-male-fashion.jpg";
+import heroBeautyFashionImage from "@/assets/hero-beauty-fashion.jpg";
+
+// Import profile images
+import profileSophieKim from "@/assets/profile-sophie-kim.jpg";
+import profileYukiTanaka from "@/assets/profile-yuki-tanaka.jpg";
+import profileMeiLinChen from "@/assets/profile-mei-lin-chen.jpg";
+import profileDrHannahPark from "@/assets/profile-dr-hannah-park.jpg";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -24,11 +41,11 @@ export const blogPosts: BlogPost[] = [
     category: "Skincare",
     date: "2025-09-28",
     readTime: "8 min read",
-    image: "/src/assets/skincare-routine.jpg",
+    image: skincareRoutineImage,
     author: {
       name: "Sophie Kim",
       bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
-      avatar: "/src/assets/profile-sophie-kim.jpg"
+      avatar: profileSophieKim
     },
     content: `
 # The Complete Guide to Korean Glass Skin (Yes, Even for Men!)
@@ -156,11 +173,11 @@ Now go forth and glow! ✨
     category: "Fashion",
     date: "2025-09-22",
     readTime: "7 min read",
-    image: "/src/assets/japan-beauty-style.jpg",
+    image: japanBeautyStyleImage,
     author: {
       name: "Yuki Tanaka",
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
-      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+      avatar: profileYukiTanaka
     },
     content: `
 # Japanese Minimalist Fashion: A Complete Style Guide for Everyone
@@ -383,11 +400,11 @@ Your future self (and your wallet) will thank you.
     category: "Beauty",
     date: "2025-09-15",
     readTime: "6 min read",
-    image: "/src/assets/taiwan-style.jpg",
+    image: taiwanStyleImage,
     author: {
       name: "Mei Lin Chen",
       bio: "Taipei beauty blogger and T-beauty product reviewer. Mei Lin is obsessed with all things cute, bubbly, and Instagram-worthy. Her bathroom cabinet is a science lab of bubble teas, milk serums, and experimental masks. She believes skincare should be fun, effective, and smell like dessert.",
-      avatar: "/src/assets/profile-mei-lin-chen.jpg"
+      avatar: profileMeiLinChen
     },
     content: `
 # Taiwanese Beauty Trends That'll Blow Your Mind in 2025
@@ -593,11 +610,11 @@ Mei Lin 💖
     category: "Skincare",
     date: "2025-09-10",
     readTime: "9 min read",
-    image: "/src/assets/kbeauty-products.jpg",
+    image: kbeautyProductsImage,
     author: {
       name: "Sophie Kim",
       bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
-      avatar: "/src/assets/profile-sophie-kim.jpg"
+      avatar: profileSophieKim
     },
     content: `
 # K-Beauty vs J-Beauty: Which Philosophy Matches Your Vibe?
@@ -885,11 +902,11 @@ Now stop overthinking and just start!
     category: "Fashion",
     date: "2025-09-05",
     readTime: "7 min read",
-    image: "/src/assets/hero-beauty-fashion.jpg",
+    image: heroBeautyFashionImage,
     author: {
       name: "Yuki Tanaka",
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
-      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+      avatar: profileYukiTanaka
     },
     content: `
 # How to Style Oversized Fashion Like an Asian Street Style Pro
@@ -1199,11 +1216,11 @@ And remember—fashion rules are guidelines, not law. If you feel good and look 
     category: "Skincare",
     date: "2025-09-18",
     readTime: "10 min read",
-    image: "/src/assets/skincare-routine.jpg",
+    image: skincareRoutineImage,
     author: {
       name: "Dr. Hannah Park",
       bio: "Dermatologist and sunscreen formulation expert based in Seoul. Dr. Park is on a mission to end sun damage one SPF bottle at a time. She's formulated award-winning sunscreens and genuinely gets excited about UV filters. Her colleagues joke she's never seen without SPF, even indoors (it's true).",
-      avatar: "/src/assets/profile-dr-hannah-park.jpg"
+      avatar: profileDrHannahPark
     },
     content: `
 # The Ultimate Guide to Asian Sunscreens (Yes, They're Better)
@@ -1506,11 +1523,11 @@ Stop making excuses. Protect your skin. Your 60-year-old self will thank you.
     category: "Beauty",
     date: "2025-09-02",
     readTime: "11 min read",
-    image: "/src/assets/makeup-trends.jpg",
+    image: makeupTrendsImage,
     author: {
       name: "Mei Lin Chen",
       bio: "Taipei beauty blogger and T-beauty product reviewer. Mei Lin is obsessed with all things cute, bubbly, and Instagram-worthy. Her bathroom cabinet is a science lab of bubble teas, milk serums, and experimental masks. She believes skincare should be fun, effective, and smell like dessert.",
-      avatar: "/src/assets/profile-mei-lin-chen.jpg"
+      avatar: profileMeiLinChen
     },
     content: `
 # Asian Makeup Trends for Beginners: Master the Basics
@@ -1914,11 +1931,11 @@ Now go practice! And send me your before/afters! 💄
     category: "Skincare",
     date: "2025-10-15",
     readTime: "9 min read",
-    image: "/src/assets/kbeauty-products.jpg",
+    image: kbeautyProductsImage,
     author: {
       name: "Dr. Hannah Park",
       bio: "Dermatologist and sunscreen formulation expert based in Seoul. Dr. Park is on a mission to end sun damage one SPF bottle at a time. She's formulated award-winning sunscreens and genuinely gets excited about UV filters. Her colleagues joke she's never seen without SPF, even indoors (it's true).",
-      avatar: "/src/assets/profile-dr-hannah-park.jpg"
+      avatar: profileDrHannahPark
     },
     content: `
 # K-Beauty Skincare Trends Dominating 2025
@@ -2039,11 +2056,11 @@ Trust the science, protect your barrier, and your skin will thank you.
     category: "Fashion",
     date: "2025-10-12",
     readTime: "8 min read",
-    image: "/src/assets/seoul-street-scene.jpg",
+    image: seoulStreetSceneImage,
     author: {
       name: "Yuki Tanaka",
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
-      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+      avatar: profileYukiTanaka
     },
     content: `
 # Seoul Street Fashion Lookbook: Winter 2025 Edition
@@ -2189,11 +2206,11 @@ Now go forth and dress like the Seoul local you were always meant to be.
     category: "Fashion",
     date: "2025-10-08",
     readTime: "10 min read",
-    image: "/src/assets/tokyo-street-scene.jpg",
+    image: tokyoStreetSceneImage,
     author: {
       name: "Yuki Tanaka",
       bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
-      avatar: "/src/assets/profile-yuki-tanaka.jpg"
+      avatar: profileYukiTanaka
     },
     content: `
 # Japanese Minimalist Wardrobe: The 33-Item Guide
@@ -2406,11 +2423,11 @@ Less clutter, more clarity. That's the Japanese way.
     category: "Fashion",
     date: "2025-10-05",
     readTime: "9 min read",
-    image: "/src/assets/korean-male-fashion.jpg",
+    image: koreanMaleFashionImage,
     author: {
       name: "Sophie Kim",
       bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
-      avatar: "/src/assets/profile-sophie-kim.jpg"
+      avatar: profileSophieKim
     },
     content: `
 # K-Fashion for Fall/Winter: Your Ultimate Guide

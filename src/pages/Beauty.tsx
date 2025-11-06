@@ -108,9 +108,90 @@ const Beauty = () => {
           </div>
         </section>
 
-        {/* Makeup Trends */}
+        {/* Featured Products */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+            <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
+              Shop Featured Products
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+              <a
+                href="https://www.yesstyle.com/en/dr-jart-ceramidin-cream-50ml/info.html/pid.1056789123"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop"
+                    alt="Dr. Jart+ Ceramidin Cream"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Dr. Jart+ Ceramidin Cream
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">Barrier-repairing moisturizer for resilient skin</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-primary">$47.90</span>
+                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.yesstyle.com/en/chuu-oversized-graphic-hoodie-gray/info.html/pid.1098765432"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&auto=format&fit=crop"
+                    alt="Chuu Oversized Graphic Hoodie"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Chuu Oversized Graphic Hoodie
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">Bold, casual hoodie for street style</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-primary">$34.90</span>
+                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.yesstyle.com/en/lilyday-pleated-midi-skirt-pink/info.html/pid.1087654321"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800&auto=format&fit=crop"
+                    alt="Lilyday Pleated Midi Skirt"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Lilyday Pleated Midi Skirt
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">Flowy, pastel pink skirt for J-fashion</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-primary">$37.80</span>
+                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Makeup Trends */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img

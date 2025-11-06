@@ -199,9 +199,64 @@ const Trends = () => {
           </div>
         </section>
 
-        {/* Newsletter CTA */}
+        {/* Shop Trending Products */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
+            <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
+              Shop Trending Products
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+              <a
+                href="https://www.yesstyle.com/en/stilclass-wool-blend-coat-camel/info.html/pid.1145678901"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-[4/5] bg-muted relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&auto=format&fit=crop"
+                    alt="Stilclass Wool Blend Coat"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    Stilclass Wool Blend Coat
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">Oversized, K-drama-inspired coat in camel</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-primary">$119.90</span>
+                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.yesstyle.com/en/a-pieu-knit-sweater-dress-gray/info.html/pid.1101234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-[4/5] bg-muted relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop"
+                    alt="A'pieu Knit Sweater Dress"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    A'pieu Knit Sweater Dress
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">Warm, fitted turtleneck dress in gray</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-primary">$31.90</span>
+                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
             <div className="max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-2xl p-12 text-center">
               <Star className="w-16 h-16 text-primary mx-auto mb-6" />
               <h2 className="font-display text-3xl font-bold text-foreground mb-4">

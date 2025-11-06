@@ -122,12 +122,14 @@ const BlogPost = () => {
 
               {/* Author Info */}
               <div className="flex items-center gap-4 pt-6 border-t border-border">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-white" />
-                </div>
+                <img 
+                  src={post.author.avatar} 
+                  alt={post.author.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
+                />
                 <div>
-                  <div className="font-semibold text-foreground">{post.author.name}</div>
-                  <div className="text-sm text-muted-foreground">{post.author.bio}</div>
+                  <div className="font-semibold text-foreground text-lg">{post.author.name}</div>
+                  <div className="text-sm text-muted-foreground line-clamp-2">{post.author.bio}</div>
                 </div>
               </div>
             </div>
@@ -216,10 +218,12 @@ const BlogPost = () => {
 
               {/* Author Card at Bottom */}
               <div className="mt-12 pt-8 border-t-2 border-border">
-                <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 flex items-start gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
-                    <User className="w-8 h-8 text-white" />
-                  </div>
+                <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 flex items-start gap-6">
+                  <img 
+                    src={post.author.avatar} 
+                    alt={post.author.name}
+                    className="w-20 h-20 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
+                  />
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">Written by</div>
                     <div className="font-display text-xl font-bold text-foreground mb-2">{post.author.name}</div>
