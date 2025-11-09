@@ -207,9 +207,7 @@ const Trends = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               <a
-                href="https://www.yesstyle.com/en/stilclass-wool-blend-coat-camel/info.html/pid.1145678901"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products/stilclass-wool-coat"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
@@ -226,15 +224,13 @@ const Trends = () => {
                   <p className="text-sm text-muted-foreground mb-3">Oversized, K-drama-inspired coat in camel</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-primary">$119.90</span>
-                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                    <span className="text-xs text-muted-foreground">Shop Now</span>
                   </div>
                 </div>
               </a>
 
               <a
-                href="https://www.yesstyle.com/en/a-pieu-knit-sweater-dress-gray/info.html/pid.1101234567"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products/apieu-knit-dress"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
@@ -251,7 +247,7 @@ const Trends = () => {
                   <p className="text-sm text-muted-foreground mb-3">Warm, fitted turtleneck dress in gray</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-primary">$31.90</span>
-                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                    <span className="text-xs text-muted-foreground">Shop Now</span>
                   </div>
                 </div>
               </a>

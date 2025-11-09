@@ -7,7 +7,7 @@ const steps = [
     purpose: "Remove makeup & sunscreen",
     product: "COSRX Low pH Good Morning Gel Cleanser",
     price: "$10.20",
-    url: "https://www.yesstyle.com/en/cosrx-low-ph-good-morning-gel-cleanser-150ml/info.html/pid.1062687471"
+    url: "/products/cosrx-low-ph-cleanser"
   },
   { 
     step: "2", 
@@ -15,7 +15,7 @@ const steps = [
     purpose: "Deep clean pores",
     product: "Anua Heartleaf Pore Control Cleansing Oil",
     price: "$17.90",
-    url: "https://www.yesstyle.com/en/anua-heartleaf-pore-control-cleansing-oil-200ml/info.html/pid.1129359107"
+    url: "/products/anua-heartleaf-cleansing-oil"
   },
   { 
     step: "3", 
@@ -23,7 +23,7 @@ const steps = [
     purpose: "2-3x weekly for smooth skin",
     product: "Some By Mi AHA-BHA-PHA 30 Days Miracle Toner",
     price: "$15.80",
-    url: "https://www.yesstyle.com/en/some-by-mi-aha-bha-pha-30-days-miracle-toner-150ml/info.html/pid.1086608100"
+    url: "/products/some-by-mi-miracle-toner"
   },
   { 
     step: "4", 
@@ -31,7 +31,7 @@ const steps = [
     purpose: "Balance & prep skin",
     product: "Isntree Hyaluronic Acid Toner",
     price: "$14.50",
-    url: "https://www.yesstyle.com/en/isntree-hyaluronic-acid-toner-200ml/info.html/pid.1076384693"
+    url: "/products/isntree-hyaluronic-toner"
   },
   { 
     step: "5", 
@@ -39,7 +39,7 @@ const steps = [
     purpose: "Boost hydration",
     product: "Missha Time Revolution The First Essence 5X",
     price: "$31.90",
-    url: "https://www.yesstyle.com/en/missha-time-revolution-the-first-essence-5x-150ml/info.html/pid.1025869999"
+    url: "/products/missha-first-essence"
   },
   { 
     step: "6", 
@@ -47,7 +47,7 @@ const steps = [
     purpose: "Target glass-skin glow",
     product: "Beauty of Joseon Glow Serum",
     price: "$16.80",
-    url: "https://www.yesstyle.com/en/beauty-of-joseon-glow-serum-propolis-niacinamide-30ml/info.html/pid.1125137850"
+    url: "/products/beauty-joseon-glow-serum"
   },
   { 
     step: "7", 
@@ -55,7 +55,7 @@ const steps = [
     purpose: "Delicate eye area care",
     product: "Purito Centella Unscented Eye Cream",
     price: "$19.90",
-    url: "https://www.yesstyle.com/en/purito-centella-unscented-eye-cream-25ml/info.html/pid.1070629761"
+    url: "/products/purito-centella-eye-cream"
   },
   { 
     step: "8", 
@@ -63,7 +63,7 @@ const steps = [
     purpose: "Lock in hydration",
     product: "COSRX Advanced Snail 92 All in One Cream",
     price: "$14.90",
-    url: "https://www.yesstyle.com/en/cosrx-advanced-snail-92-all-in-one-cream-100ml/info.html/pid.1025123456"
+    url: "/products/cosrx-snail-cream"
   },
   { 
     step: "9", 
@@ -71,7 +71,7 @@ const steps = [
     purpose: "Intensive care 2-3x weekly",
     product: "Mediheal Tea Tree Essential Blemish Control Mask",
     price: "$1.90",
-    url: "https://www.yesstyle.com/en/mediheal-tea-tree-essential-blemish-control-mask-24ml/info.html/pid.1003456789"
+    url: "/products/mediheal-tea-tree-mask"
   },
   { 
     step: "10", 
@@ -79,7 +79,7 @@ const steps = [
     purpose: "SPF 50+ daily (AM only)",
     product: "Round Lab Birch Juice Moisturizing Sunscreen",
     price: "$19.80",
-    url: "https://www.yesstyle.com/en/round-lab-birch-juice-moisturizing-sunscreen-spf50-pa-50ml/info.html/pid.1109876543"
+    url: "/products/roundlab-birch-sunscreen"
   },
 ];
 
@@ -103,8 +103,6 @@ const SkincareRoutine = () => {
                 <a
                   key={item.step}
                   href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-card border border-border rounded-xl p-4 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
                 >
                   <div className="flex items-start gap-3">

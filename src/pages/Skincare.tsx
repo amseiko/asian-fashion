@@ -1,7 +1,59 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Droplets, Sun, Moon, Clock } from "lucide-react";
+import { Droplets, Sun, Moon, Clock, ShoppingCart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import skincareImage from "@/assets/skincare-routine.jpg";
+import productCosrxCleanse from "@/assets/product-cosrx-cleanser.jpg";
+import productAnuaOil from "@/assets/product-anua-cleansing-oil.jpg";
+import productIsntreeToner from "@/assets/product-isntree-toner.jpg";
+import productJoseonSerum from "@/assets/product-beauty-joseon-serum.jpg";
+import productCosrxCream from "@/assets/product-cosrx-snail-cream.jpg";
+import productRoundlabSun from "@/assets/product-roundlab-sunscreen.jpg";
+
+const featuredProducts = [
+  {
+    image: productCosrxCleanse,
+    name: "COSRX Low pH Good Morning Gel Cleanser",
+    price: "$10.20",
+    description: "Gentle, pH-balanced cleanser for daily use",
+    slug: "cosrx-low-ph-cleanser",
+  },
+  {
+    image: productAnuaOil,
+    name: "Anua Heartleaf Pore Control Cleansing Oil",
+    price: "$17.90",
+    description: "Oil-to-milk cleanser with heartleaf for pore care",
+    slug: "anua-heartleaf-cleansing-oil",
+  },
+  {
+    image: productIsntreeToner,
+    name: "Isntree Hyaluronic Acid Toner",
+    price: "$14.50",
+    description: "Lightweight, hydrating toner with hyaluronic acid",
+    slug: "isntree-hyaluronic-toner",
+  },
+  {
+    image: productJoseonSerum,
+    name: "Beauty of Joseon Glow Serum",
+    price: "$16.80",
+    description: "Propolis and niacinamide for glass-skin glow",
+    slug: "beauty-joseon-glow-serum",
+  },
+  {
+    image: productCosrxCream,
+    name: "COSRX Advanced Snail 92 All in One Cream",
+    price: "$14.90",
+    description: "Snail mucin cream for intense hydration",
+    slug: "cosrx-snail-cream",
+  },
+  {
+    image: productRoundlabSun,
+    name: "Round Lab Birch Juice Moisturizing Sunscreen",
+    price: "$19.80",
+    description: "SPF 50+ sunscreen with no white cast",
+    slug: "roundlab-birch-sunscreen",
+  },
+];
 
 const morningRoutine = [
   { step: 1, name: "Cleanser", purpose: "Remove overnight oils and prepare skin" },
@@ -108,11 +160,61 @@ const Skincare = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-                Skincare Guide
+                Ultimate Asian Skincare Routine
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Master the art of Korean skincare with comprehensive routines, ingredient guides, and tips for achieving your best skin ever.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Products - Shoppable Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-display text-4xl font-bold text-foreground mb-4">
+                Shop Featured Products
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Curated K-beauty essentials to build your perfect routine
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {featuredProducts.map((product) => (
+                <div
+                  key={product.slug}
+                  className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative h-64 overflow-hidden bg-muted/30">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-semibold text-foreground text-sm leading-tight flex-1">
+                        {product.name}
+                      </h3>
+                      <span className="text-primary font-bold text-lg ml-2">
+                        {product.price}
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mb-4">
+                      {product.description}
+                    </p>
+                    <a href={`/products/${product.slug}`} className="block">
+                      <Button className="w-full" size="sm">
+                        <ShoppingCart className="w-4 h-4 mr-2" />
+                        Shop Now
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -237,7 +339,8 @@ const Skincare = () => {
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={skincareImage}
-                  alt="Korean skincare routine"
+                  alt="Korean skincare routine products"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>

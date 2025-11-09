@@ -116,9 +116,7 @@ const Beauty = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
               <a
-                href="https://www.yesstyle.com/en/dr-jart-ceramidin-cream-50ml/info.html/pid.1056789123"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products/dr-jart-ceramidin-cream"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">
@@ -135,15 +133,13 @@ const Beauty = () => {
                   <p className="text-sm text-muted-foreground mb-3">Barrier-repairing moisturizer for resilient skin</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-primary">$47.90</span>
-                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                    <span className="text-xs text-muted-foreground">Shop Now</span>
                   </div>
                 </div>
               </a>
 
               <a
-                href="https://www.yesstyle.com/en/chuu-oversized-graphic-hoodie-gray/info.html/pid.1098765432"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products/chuu-oversized-hoodie"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">
@@ -160,15 +156,13 @@ const Beauty = () => {
                   <p className="text-sm text-muted-foreground mb-3">Bold, casual hoodie for street style</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-primary">$34.90</span>
-                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                    <span className="text-xs text-muted-foreground">Shop Now</span>
                   </div>
                 </div>
               </a>
 
               <a
-                href="https://www.yesstyle.com/en/lilyday-pleated-midi-skirt-pink/info.html/pid.1087654321"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/products/lilyday-pleated-skirt"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">
@@ -185,7 +179,7 @@ const Beauty = () => {
                   <p className="text-sm text-muted-foreground mb-3">Flowy, pastel pink skirt for J-fashion</p>
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold text-primary">$37.80</span>
-                    <span className="text-xs text-muted-foreground">Shop on YesStyle</span>
+                    <span className="text-xs text-muted-foreground">Shop Now</span>
                   </div>
                 </div>
               </a>
