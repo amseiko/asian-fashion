@@ -15,6 +15,22 @@ import profileYukiTanaka from "@/assets/profile-yuki-tanaka.jpg";
 import profileMeiLinChen from "@/assets/profile-mei-lin-chen.jpg";
 import profileDrHannahPark from "@/assets/profile-dr-hannah-park.jpg";
 
+// Import new glass skin article images
+import glassSkincareHero from "@/assets/glass-skin-hero.jpg";
+import skincareFlatlay from "@/assets/skincare-flatlay.jpg";
+import maleSkincare from "@/assets/male-skincare-routine.jpg";
+import sheetMaskTreatment from "@/assets/sheet-mask-treatment.jpg";
+import glassSkincareResults from "@/assets/glass-skin-results.jpg";
+import doubleCleansecareProducts from "@/assets/double-cleanse-products.jpg";
+
+// Import product images
+import productCosrxCleanser from "@/assets/product-cosrx-cleanser.jpg";
+import productBeautyJoseonSerum from "@/assets/product-beauty-joseon-serum.jpg";
+import productRoundlabSunscreen from "@/assets/product-roundlab-sunscreen.jpg";
+import productCosrxSnailCream from "@/assets/product-cosrx-snail-cream.jpg";
+import productAnuaCleansingOil from "@/assets/product-anua-cleansing-oil.jpg";
+import productIsntreeToner from "@/assets/product-isntree-toner.jpg";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -30,6 +46,17 @@ export interface BlogPost {
     bio: string;
     avatar: string;
   };
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
+  products?: {
+    name: string;
+    description: string;
+    price: number;
+    image: string;
+    link: string;
+  }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -41,7 +68,7 @@ export const blogPosts: BlogPost[] = [
     category: "Skincare",
     date: "2025-09-28",
     readTime: "8 min read",
-    image: skincareRoutineImage,
+    image: glassSkincareHero,
     author: {
       name: "Sophie Kim",
       bio: "K-beauty enthusiast and licensed esthetician specializing in Korean skincare routines. After years of struggling with her own skin, Sophie discovered the transformative power of K-beauty and now helps others achieve their glass skin dreams. When she's not testing new essences, she's probably over-analyzing ingredient lists at 2 AM.",
@@ -51,6 +78,8 @@ export const blogPosts: BlogPost[] = [
 # The Complete Guide to Korean Glass Skin (Yes, Even for Men!)
 
 Listen up, beautiful people! Glass skin isn't some unattainable K-drama fantasy. I've helped hundreds of clients—men, women, everyone in between—achieve this look. And honestly? The guys often get results faster because they haven't over-exfoliated their faces for years. 💁‍♀️
+
+![Achieving perfect glass skin complexion](${glassSkincareResults})
 
 ## What IS Glass Skin, Really?
 
@@ -65,13 +94,17 @@ Okay, so "glass skin" sounds a bit dramatic, but here's what we're actually goin
 
 ## The Essential Steps (No, You Can't Skip Any)
 
+![Essential skincare products for glass skin](${skincareFlatlay})
+
 ### 1. Double Cleansing: The Non-Negotiable
 
 Start with an **oil cleanser** (yes, even if you have oily skin—trust me on this). Then follow with a gentle **water-based cleanser**. 
 
 **For the guys reading this:** I know, I know. Two cleansers sounds excessive. But would you wash a car with just water? Exactly.
 
-**Product rec:** [COSRX Low pH Good Morning Gel Cleanser](https://www.yesstyle.com/en/cosrx-low-ph-good-morning-gel-cleanser-150ml/info.html/pid.1052684721) - gentle enough for daily use, effective enough to actually work.
+![Double cleansing products demonstration](${doubleCleansecareProducts})
+
+**Product rec:** [COSRX Low pH Good Morning Gel Cleanser](/products/cosrx-cleanser) - gentle enough for daily use, effective enough to actually work.
 
 ### 2. Exfoliation (But Make It Gentle)
 
@@ -85,7 +118,7 @@ This is where Korean skincare gets genius. Pat in a hydrating toner—I'm talkin
 
 **The 7-Skin Method:** Apply your toner 7 times in thin layers. Sounds crazy? Try it. The hydration is INSANE.
 
-**Try this:** [COSRX Hydrium Watery Toner](https://www.yesstyle.com/en/cosrx-hydrium-watery-toner-280ml/info.html/pid.1088109849)
+**Try this:** [Isntree Hyaluronic Acid Toner](/products/isntree-toner)
 
 ### 4. Essence: Not Optional
 
@@ -93,7 +126,9 @@ Look, I get it. "What even IS an essence?" It's basically concentrated active in
 
 **For men:** This step alone will change your skin game. I've seen it transform rough, tired-looking skin into smooth, bright skin in weeks.
 
-**Hero product:** [COSRX Advanced Snail 96 Mucin Power Essence](https://www.yesstyle.com/en/cosrx-advanced-snail-96-mucin-power-essence-100ml/info.html/pid.1052684697) - Don't let "snail" scare you. This stuff is GOLD.
+![Men's skincare routine application](${maleSkincare})
+
+**Hero product:** [COSRX Advanced Snail 96 Mucin Power Essence](/products/cosrx-snail-cream) - Don't let "snail" scare you. This stuff is GOLD.
 
 ### 5. Serum for Your Specific Drama
 
@@ -106,7 +141,7 @@ Pick your battle:
 
 2-3 times a week. Put one on, take a selfie, scare your roommate. These things are hydration bombs.
 
-**Affordable favorite:** [Mediheal N.M.F Intensive Hydrating Mask](https://www.yesstyle.com/en/mediheal-nmf-intensive-hydrating-mask-10-pcs/info.html/pid.1058839676)
+![Relaxing sheet mask treatment](${sheetMaskTreatment})
 
 ### 7. Moisturizer: Lock It In
 
@@ -118,7 +153,7 @@ Gel for oily skin, cream for dry skin. Simple as that.
 
 **Guys, seriously:** Most of the "aging" you see isn't age—it's sun damage. Wear the damn sunscreen.
 
-**Best pick:** [COSRX Aloe Soothing Sun Cream SPF50+ PA+++](https://www.yesstyle.com/en/cosrx-aloe-soothing-sun-cream-spf50-pa-50ml-50ml/info.html/pid.1062058027)
+**Best pick:** [Round Lab Birch Juice Moisturizing Sunscreen SPF50+](/products/roundlab-sunscreen)
 
 ## Key Ingredients: The Glass Skin Dream Team
 
@@ -163,7 +198,77 @@ But here's what I tell all my clients: **You wear your face every single day.** 
 Now go forth and glow! ✨
 
 *Sophie*
-    `
+    `,
+    faqs: [
+      {
+        question: "How long does it take to see glass skin results?",
+        answer: "Most people start seeing noticeable improvements in 6-8 weeks with consistent use of the right products. However, factors like your starting skin condition, age, and lifestyle habits can affect the timeline. The key is consistency—missing days will set you back."
+      },
+      {
+        question: "Can men really achieve glass skin?",
+        answer: "Absolutely! In fact, men often see faster results because they typically haven't over-exfoliated their skin for years. The same routine works for all genders—it's just about finding the right products for your specific skin type and concerns."
+      },
+      {
+        question: "Is glass skin suitable for oily or acne-prone skin?",
+        answer: "Yes! The key is using lightweight, non-comedogenic products. Focus on gel-based moisturizers, BHA exfoliants, and niacinamide serums. The hydration from glass skin routines can actually help balance oil production and reduce breakouts."
+      },
+      {
+        question: "Do I really need all 8 steps every day?",
+        answer: "Not necessarily. If you're just starting, begin with the basics: cleanser, moisturizer, and sunscreen. Once you've mastered that for a month, add one new step at a time. The full routine is ideal, but it's better to do fewer steps consistently than all steps sporadically."
+      },
+      {
+        question: "What's the most important product for glass skin?",
+        answer: "Sunscreen, hands down. No amount of serums or essences will help if you're getting sun damage daily. SPF 50+ every single day is non-negotiable. After that, a good hydrating toner or essence makes the biggest difference."
+      },
+      {
+        question: "Can I achieve glass skin on a budget?",
+        answer: "Definitely! Korean skincare is known for being affordable yet effective. Brands like COSRX, Isntree, and Round Lab offer excellent products at drugstore prices. Focus on the essentials first: cleanser, toner, essence, moisturizer, and sunscreen."
+      }
+    ],
+    products: [
+      {
+        name: "COSRX Low pH Good Morning Gel Cleanser",
+        description: "Gentle, pH-balanced cleanser perfect for daily use. Won't strip your skin's natural moisture barrier.",
+        price: 12.99,
+        image: productCosrxCleanser,
+        link: "/products/cosrx-cleanser"
+      },
+      {
+        name: "Anua Heartleaf Pore Control Cleansing Oil",
+        description: "First step of double cleansing. Melts away makeup, sunscreen, and sebum without clogging pores.",
+        price: 19.99,
+        image: productAnuaCleansingOil,
+        link: "/products/anua-cleansing-oil"
+      },
+      {
+        name: "Isntree Hyaluronic Acid Toner",
+        description: "Hydrating toner with multiple weights of hyaluronic acid. Perfect for the 7-skin method.",
+        price: 16.50,
+        image: productIsntreeToner,
+        link: "/products/isntree-toner"
+      },
+      {
+        name: "Beauty of Joseon Glow Serum",
+        description: "Propolis and niacinamide serum for brightening and evening skin tone. A K-beauty cult favorite.",
+        price: 15.99,
+        image: productBeautyJoseonSerum,
+        link: "/products/beauty-joseon-serum"
+      },
+      {
+        name: "COSRX Advanced Snail 96 Mucin Power Essence",
+        description: "The holy grail essence. Repairs, hydrates, and gives that glass skin glow. Don't knock it till you try it.",
+        price: 24.99,
+        image: productCosrxSnailCream,
+        link: "/products/cosrx-snail-cream"
+      },
+      {
+        name: "Round Lab Birch Juice Moisturizing Sunscreen SPF50+",
+        description: "Lightweight, non-greasy sunscreen that layers beautifully. No white cast. Your final and most crucial step.",
+        price: 18.50,
+        image: productRoundlabSunscreen,
+        link: "/products/roundlab-sunscreen"
+      }
+    ]
   },
   {
     id: "2",

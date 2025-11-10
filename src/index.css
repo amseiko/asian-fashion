@@ -38,29 +38,27 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
+    /* Asian-inspired gradients */
     --gradient-hero: linear-gradient(135deg, hsl(340 80% 50%), hsl(280 60% 55%));
     --gradient-beauty: linear-gradient(135deg, hsl(280 60% 55%), hsl(240 70% 60%));
     --gradient-fresh: linear-gradient(135deg, hsl(160 50% 50%), hsl(180 60% 55%));
+    --gradient-sakura: linear-gradient(135deg, hsl(340 70% 85%), hsl(350 75% 90%));
+    --gradient-matcha: linear-gradient(135deg, hsl(120 25% 65%), hsl(140 30% 70%));
     
+    /* Soft shadows */
     --shadow-elegant: 0 10px 40px -10px hsl(340 80% 50% / 0.15);
     --shadow-hover: 0 20px 60px -10px hsl(340 80% 50% / 0.25);
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.08);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -134,11 +132,38 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
   .animate-fade-in {
     animation: fade-in 1s ease-out;
   }
   
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  /* Blog article custom styles */
+  .prose img {
+    @apply rounded-2xl my-8 shadow-lg;
+  }
+  
+  .prose a {
+    @apply text-primary font-semibold no-underline hover:underline transition-colors;
+  }
+  
+  /* Product card hover effect */
+  .product-card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
 }

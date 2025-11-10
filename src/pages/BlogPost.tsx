@@ -1,14 +1,31 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useParams, Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, User, BookOpen, Lightbulb } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, BookOpen, Lightbulb, ShoppingBag, ExternalLink } from "lucide-react";
 import { getBlogPost, blogPosts } from "@/data/blogPosts";
 import ReactMarkdown from "react-markdown";
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPost(slug) : undefined;
+  const [readingProgress, setReadingProgress] = useState(0);
+
+  // Track reading progress
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      setReadingProgress(progress);
+    };
+
+    window.addEventListener('scroll', updateProgress);
+    return () => window.removeEventListener('scroll', updateProgress);
+  }, []);
 
   if (!post) {
     return (
@@ -68,6 +85,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen">
+      <Progress value={readingProgress} className="fixed top-0 left-0 right-0 z-50 h-1 rounded-none" />
       <Navigation />
       <main className="pt-16">
         {/* Hero Image */}
@@ -216,18 +234,92 @@ const BlogPost = () => {
                 </ReactMarkdown>
               </div>
 
+              {/* FAQs Section */}
+              {post.faqs && post.faqs.length > 0 && (
+                <div className="mt-12 pt-8 border-t-2 border-border">
+                  <h2 className="font-display text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                    <span className="w-1 h-8 bg-primary rounded"></span>
+                    Frequently Asked Questions
+                  </h2>
+                  <Accordion type="single" collapsible className="space-y-4">
+                    {post.faqs.map((faq, index) => (
+                      <AccordionItem 
+                        key={index} 
+                        value={`faq-${index}`}
+                        className="border border-border rounded-xl px-6 bg-card hover:border-primary/50 transition-colors"
+                      >
+                        <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-5">
+                          {faq.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground pb-5">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              )}
+
+              {/* Shop Related Products CTA */}
+              {post.products && post.products.length > 0 && (
+                <div className="mt-12 pt-8 border-t-2 border-border">
+                  <h2 className="font-display text-3xl font-bold text-foreground mb-2">
+                    Shop the Essentials
+                  </h2>
+                  <p className="text-muted-foreground mb-6">
+                    Curated products mentioned in this guide to help you achieve the results you want.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {post.products.map((product, index) => (
+                      <div 
+                        key={index}
+                        className="bg-gradient-to-br from-card to-muted/30 border border-border rounded-2xl overflow-hidden group hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+                      >
+                        <div className="aspect-square bg-muted relative overflow-hidden">
+                          <img 
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="p-5">
+                          <h3 className="font-semibold text-foreground mb-2 line-clamp-2">
+                            {product.name}
+                          </h3>
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                            {product.description}
+                          </p>
+                          <div className="flex items-center justify-between">
+                            <span className="text-2xl font-bold text-primary">
+                              ${product.price}
+                            </span>
+                            <Button asChild size="sm" className="group-hover:scale-105 transition-transform">
+                              <a href={product.link} target="_blank" rel="noopener noreferrer">
+                                Shop Now
+                                <ExternalLink className="w-3 h-3 ml-1" />
+                              </a>
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Author Card at Bottom */}
               <div className="mt-12 pt-8 border-t-2 border-border">
-                <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 flex items-start gap-6">
+                <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6 flex flex-col sm:flex-row items-start gap-6">
                   <img 
                     src={post.author.avatar} 
                     alt={post.author.name}
-                    className="w-20 h-20 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-primary/20 flex-shrink-0"
                   />
-                  <div>
+                  <div className="flex-1">
                     <div className="text-sm text-muted-foreground mb-1">Written by</div>
-                    <div className="font-display text-xl font-bold text-foreground mb-2">{post.author.name}</div>
-                    <div className="text-muted-foreground">{post.author.bio}</div>
+                    <div className="font-display text-2xl font-bold text-foreground mb-2">{post.author.name}</div>
+                    <div className="text-muted-foreground leading-relaxed">{post.author.bio}</div>
                   </div>
                 </div>
               </div>
