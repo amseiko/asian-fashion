@@ -1,7 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Sparkles, Heart, Star, Droplets, Flame, Sun } from "lucide-react";
-import makeupImage from "@/assets/makeup-trends.jpg";
+import heroGlassSkin from "@/assets/hero-glass-skin.jpg";
+import routineMap from "@/assets/routine-map.jpg";
+import beforeAfter from "@/assets/before-after-glass-skin.jpg";
+import ingredientSpotlight from "@/assets/ingredient-spotlight.jpg";
+import productSerum from "@/assets/product-serum-1.jpg";
+import productToner from "@/assets/product-toner-1.jpg";
+import productMoisturizer from "@/assets/product-moisturizer-1.jpg";
+import productSunscreen from "@/assets/product-sunscreen-1.jpg";
+import productEssence from "@/assets/product-essence-1.jpg";
+import productEyecream from "@/assets/product-eyecream-1.jpg";
 
 const beautyPhilosophies = [
   {
@@ -37,13 +46,20 @@ const Beauty = () => {
       <Navigation />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
+        <section className="relative h-[70vh] overflow-hidden">
+          <img
+            src={heroGlassSkin}
+            alt="Korean glass skin beauty close-up"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center max-w-4xl mx-auto px-4">
               <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Asian Beauty
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-foreground/90 mb-8">
                 Discover the secrets behind Korean glass skin, Japanese simplicity, and Taiwanese innovation. Learn about the products, routines, and philosophies that have revolutionized skincare worldwide.
               </p>
             </div>
@@ -83,148 +99,137 @@ const Beauty = () => {
           </div>
         </section>
 
-        {/* Must-Have Products */}
+        {/* Beauty Trend Carousel */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
-                Must-Have Products
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {popularProducts.map((product) => {
-                  const Icon = product.icon;
-                  return (
-                    <div key={product.name} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Icon className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="font-semibold text-foreground mb-2">{product.name}</h3>
-                      <p className="text-sm text-muted-foreground">{product.note}</p>
-                    </div>
-                  );
-                })}
+            <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
+              Glass Skin Journey
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={routineMap}
+                  alt="10-step Korean skincare routine map"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={beforeAfter}
+                  alt="Before and after glass skin transformation"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={ingredientSpotlight}
+                  alt="Centella and snail mucin ingredients spotlight"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Featured Products */}
+        {/* Product Close-Ups */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
-              Shop Featured Products
+              Essential Products
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-16">
               <a
-                href="/products/dr-jart-ceramidin-cream"
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+                href="/shops-coming-soon"
+                className="group text-center"
               >
-                <div className="aspect-square bg-muted relative overflow-hidden">
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
                   <img
-                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop"
-                    alt="Dr. Jart+ Ceramidin Cream"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={productSerum}
+                    alt="Korean serum"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    Dr. Jart+ Ceramidin Cream
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">Barrier-repairing moisturizer for resilient skin</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">$47.90</span>
-                    <span className="text-xs text-muted-foreground">Shop Now</span>
-                  </div>
-                </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Serum</p>
               </a>
 
               <a
-                href="/products/chuu-oversized-hoodie"
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+                href="/shops-coming-soon"
+                className="group text-center"
               >
-                <div className="aspect-square bg-muted relative overflow-hidden">
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
                   <img
-                    src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&auto=format&fit=crop"
-                    alt="Chuu Oversized Graphic Hoodie"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={productToner}
+                    alt="Korean toner"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    Chuu Oversized Graphic Hoodie
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">Bold, casual hoodie for street style</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">$34.90</span>
-                    <span className="text-xs text-muted-foreground">Shop Now</span>
-                  </div>
-                </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Toner</p>
               </a>
 
               <a
-                href="/products/lilyday-pleated-skirt"
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+                href="/shops-coming-soon"
+                className="group text-center"
               >
-                <div className="aspect-square bg-muted relative overflow-hidden">
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
                   <img
-                    src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800&auto=format&fit=crop"
-                    alt="Lilyday Pleated Midi Skirt"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={productMoisturizer}
+                    alt="Korean moisturizer"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    Lilyday Pleated Midi Skirt
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">Flowy, pastel pink skirt for J-fashion</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">$37.80</span>
-                    <span className="text-xs text-muted-foreground">Shop Now</span>
-                  </div>
-                </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Moisturizer</p>
               </a>
-            </div>
 
-            {/* Makeup Trends */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={makeupImage}
-                  alt="Asian makeup trends"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h2 className="font-display text-4xl font-bold text-foreground mb-6">
-                  Makeup Trends
-                </h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Gradient Lips</h3>
-                    <p className="text-sm text-muted-foreground">
-                      The signature Korean makeup look featuring a soft, blurred lip color that's darker in the center and fades outward.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Straight Brows</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Natural, straight eyebrows create a youthful, innocent appearance that's popular across Asia.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Aegyo Sal</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Highlighting under the eyes to create the appearance of "eye smiles" for a more youthful look.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Dewy Skin</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Glass skin extends to makeup with glowing, luminous bases that look fresh and hydrated.
-                    </p>
-                  </div>
+              <a
+                href="/shops-coming-soon"
+                className="group text-center"
+              >
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img
+                    src={productSunscreen}
+                    alt="Korean sunscreen"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
                 </div>
-              </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Sunscreen</p>
+              </a>
+
+              <a
+                href="/shops-coming-soon"
+                className="group text-center"
+              >
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img
+                    src={productEssence}
+                    alt="Korean essence"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Essence</p>
+              </a>
+
+              <a
+                href="/shops-coming-soon"
+                className="group text-center"
+              >
+                <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img
+                    src={productEyecream}
+                    alt="Korean eye cream"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Eye Cream</p>
+              </a>
             </div>
           </div>
         </section>

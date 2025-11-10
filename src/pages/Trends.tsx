@@ -1,6 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { TrendingUp, Flame, Zap, Sparkles, Star, Heart } from "lucide-react";
+import heroCollage from "@/assets/hero-trends-collage.jpg";
+import trendLatte from "@/assets/trend-latte-makeup.jpg";
+import trendBlurring from "@/assets/trend-blurring-primer.jpg";
+import trendCycling from "@/assets/trend-skin-cycling.jpg";
+import trendFermented from "@/assets/trend-fermented.jpg";
 
 const fashionTrends = [
   {
@@ -79,20 +84,30 @@ const Trends = () => {
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        {/* Hero Section */}
+        {/* Hero Section with Vertical Collage */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-2 rounded-full mb-6">
-                <TrendingUp className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-primary">What's Hot Right Now</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-2 rounded-full mb-6">
+                  <TrendingUp className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium text-primary">What's Hot Right Now</span>
+                </div>
+                <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
+                  Trending Now
+                </h1>
+                <p className="text-xl text-muted-foreground">
+                  Stay ahead of the curve with the latest fashion, beauty, and skincare trends sweeping across Korea, Japan, and Taiwan.
+                </p>
               </div>
-              <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-                Trending Now
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Stay ahead of the curve with the latest fashion, beauty, and skincare trends sweeping across Korea, Japan, and Taiwan.
-              </p>
+              <div className="rounded-2xl overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0">
+                <img
+                  src={heroCollage}
+                  alt="Trending Asian fashion and beauty styles"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -165,36 +180,45 @@ const Trends = () => {
           </div>
         </section>
 
-        {/* Skincare Trends */}
-        <section className="py-20">
+        {/* Trend Video Thumbnails */}
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
-              Skincare Trends
+              Tutorial Previews
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {skincareTrends.map((trend) => {
-                const Icon = trend.icon;
-                return (
-                  <div key={trend.title} className="bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all hover:border-primary/50">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <span className="text-xs px-3 py-1 bg-secondary/10 text-secondary rounded-full border border-secondary/20 inline-block mb-4">
-                      {trend.category}
-                    </span>
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-                      {trend.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      {trend.description}
-                    </p>
-                    <div className="pt-4 border-t border-border">
-                      <p className="text-sm font-semibold text-foreground mb-2">Routine Tip:</p>
-                      <p className="text-sm text-muted-foreground">{trend.routine}</p>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src={trendLatte}
+                  alt="Latte makeup tutorial preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src={trendBlurring}
+                  alt="Blurring primer tutorial preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src={trendCycling}
+                  alt="Skin cycling routine preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src={trendFermented}
+                  alt="Fermented skincare preview"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -207,48 +231,42 @@ const Trends = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               <a
-                href="/products/stilclass-wool-coat"
+                href="/shops-coming-soon"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&auto=format&fit=crop"
-                    alt="Stilclass Wool Blend Coat"
+                    alt="Trending fashion item"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    Stilclass Wool Blend Coat
+                    Trending Fashion
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">Oversized, K-drama-inspired coat in camel</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">$119.90</span>
-                    <span className="text-xs text-muted-foreground">Shop Now</span>
-                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Coming Soon</p>
                 </div>
               </a>
 
               <a
-                href="/products/apieu-knit-dress"
+                href="/shops-coming-soon"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop"
-                    alt="A'pieu Knit Sweater Dress"
+                    alt="Trending beauty item"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    A'pieu Knit Sweater Dress
+                    Trending Beauty
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">Warm, fitted turtleneck dress in gray</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-primary">$31.90</span>
-                    <span className="text-xs text-muted-foreground">Shop Now</span>
-                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">Coming Soon</p>
                 </div>
               </a>
             </div>

@@ -1,7 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Shirt, Star, TrendingUp, Sparkles } from "lucide-react";
-import koreaImage from "@/assets/kbeauty-products.jpg";
+import heroFashion from "@/assets/hero-beauty-fashion.jpg";
+import trendY2K from "@/assets/trend-y2k-revival.jpg";
+import trendGorpcore from "@/assets/trend-gorpcore.jpg";
+import productCardigan from "@/assets/product-cardigan.jpg";
+import productSkirt from "@/assets/product-skirt.jpg";
+import productSneakers from "@/assets/product-sneakers.jpg";
 
 const fashionStyles = [
   {
@@ -34,13 +39,20 @@ const Fashion = () => {
       <Navigation />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
+        <section className="relative h-[70vh] overflow-hidden">
+          <img
+            src={heroFashion}
+            alt="Korean and Japanese street fashion"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center max-w-4xl mx-auto px-4">
               <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Asian Fashion
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-foreground/90 mb-8">
                 Explore the diverse and innovative fashion scenes of Korea, Japan, and Taiwan. From street style to haute couture, discover what makes Asian fashion so influential worldwide.
               </p>
             </div>
@@ -76,62 +88,110 @@ const Fashion = () => {
           </div>
         </section>
 
-        {/* Current Trends */}
+        {/* Trend Image Grid */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
               Current Fashion Trends
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {trends.map((trend) => {
-                const Icon = trend.icon;
-                return (
-                  <div key={trend.title} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-colors">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2">{trend.title}</h3>
-                    <p className="text-sm text-muted-foreground">{trend.description}</p>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+              <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+                <img
+                  src={trendY2K}
+                  alt="Y2K Revival fashion trend"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                  <h3 className="font-display text-2xl font-bold text-foreground">Y2K Revival</h3>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden group cursor-pointer">
+                <img
+                  src={trendGorpcore}
+                  alt="Gorpcore aesthetic fashion trend"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
+                  <h3 className="font-display text-2xl font-bold text-foreground">Gorpcore</h3>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-center">
+                <Star className="w-12 h-12 text-primary mb-4" />
+                <h3 className="font-display text-2xl font-bold text-foreground mb-3">More Trends</h3>
+                <p className="text-muted-foreground">Discover seasonal styles and emerging aesthetics</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Shopping Tips */}
+        {/* Product Teaser Cards */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto bg-card border border-border rounded-2xl p-12">
-              <h2 className="font-display text-3xl font-bold text-foreground mb-6 text-center">
-                Shopping Asian Fashion Online
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">Sizing Tips</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Asian sizing typically runs smaller than Western sizing. Always check the size chart and measurements before ordering.
-                  </p>
+            <h2 className="font-display text-4xl font-bold text-foreground mb-12 text-center">
+              Shop the Look
+            </h2>
+            <div className="flex gap-6 overflow-x-auto pb-4 max-w-6xl mx-auto scrollbar-hide">
+              <a
+                href="/shops-coming-soon"
+                className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src={productCardigan}
+                    alt="Korean oversized cardigan"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">Popular Brands</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Look for brands like Stylenanda, Chuu, and W Concept for Korean fashion, or Uniqlo and GU for Japanese basics.
-                  </p>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    Oversized Cardigan
+                  </h3>
+                  <p className="text-sm text-muted-foreground">Coming Soon</p>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">Shipping</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Expect 2-4 weeks for international shipping. Some retailers offer express options for faster delivery.
-                  </p>
+              </a>
+
+              <a
+                href="/shops-coming-soon"
+                className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src={productSkirt}
+                    alt="Pleated midi skirt"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-3">Styling Advice</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Don't be afraid to mix pieces from different regions. The key is finding what makes you feel confident.
-                  </p>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    Pleated Midi Skirt
+                  </h3>
+                  <p className="text-sm text-muted-foreground">Coming Soon</p>
                 </div>
-              </div>
+              </a>
+
+              <a
+                href="/shops-coming-soon"
+                className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
+              >
+                <div className="aspect-square bg-muted relative overflow-hidden">
+                  <img
+                    src={productSneakers}
+                    alt="Platform sneakers"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    Platform Sneakers
+                  </h3>
+                  <p className="text-sm text-muted-foreground">Coming Soon</p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
