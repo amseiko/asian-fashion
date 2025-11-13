@@ -104,7 +104,7 @@ Start with an **oil cleanser** (yes, even if you have oily skin—trust me on th
 
 ![Double cleansing products demonstration](${doubleCleansecareProducts})
 
-**Product rec:** [COSRX Low pH Good Morning Gel Cleanser](/products/cosrx-cleanser) - gentle enough for daily use, effective enough to actually work.
+**Product rec:** [COSRX Low pH Good Morning Gel Cleanser](/coming-soon) - gentle enough for daily use, effective enough to actually work.
 
 ### 2. Exfoliation (But Make It Gentle)
 
@@ -118,7 +118,7 @@ This is where Korean skincare gets genius. Pat in a hydrating toner—I'm talkin
 
 **The 7-Skin Method:** Apply your toner 7 times in thin layers. Sounds crazy? Try it. The hydration is INSANE.
 
-**Try this:** [Isntree Hyaluronic Acid Toner](/products/isntree-toner)
+**Try this:** [Isntree Hyaluronic Acid Toner](/coming-soon)
 
 ### 4. Essence: Not Optional
 
@@ -128,7 +128,7 @@ Look, I get it. "What even IS an essence?" It's basically concentrated active in
 
 ![Men's skincare routine application](${maleSkincare})
 
-**Hero product:** [COSRX Advanced Snail 96 Mucin Power Essence](/products/cosrx-snail-cream) - Don't let "snail" scare you. This stuff is GOLD.
+**Hero product:** [COSRX Advanced Snail 96 Mucin Power Essence](/coming-soon) - Don't let "snail" scare you. This stuff is GOLD.
 
 ### 5. Serum for Your Specific Drama
 
@@ -153,7 +153,7 @@ Gel for oily skin, cream for dry skin. Simple as that.
 
 **Guys, seriously:** Most of the "aging" you see isn't age—it's sun damage. Wear the damn sunscreen.
 
-**Best pick:** [Round Lab Birch Juice Moisturizing Sunscreen SPF50+](/products/roundlab-sunscreen)
+**Best pick:** [Round Lab Birch Juice Moisturizing Sunscreen SPF50+](/coming-soon)
 
 ## Key Ingredients: The Glass Skin Dream Team
 
@@ -231,42 +231,42 @@ Now go forth and glow! ✨
         description: "Gentle, pH-balanced cleanser perfect for daily use. Won't strip your skin's natural moisture barrier.",
         price: 12.99,
         image: productCosrxCleanser,
-        link: "/products/cosrx-cleanser"
+        link: "/coming-soon"
       },
       {
         name: "Anua Heartleaf Pore Control Cleansing Oil",
         description: "First step of double cleansing. Melts away makeup, sunscreen, and sebum without clogging pores.",
         price: 19.99,
         image: productAnuaCleansingOil,
-        link: "/products/anua-cleansing-oil"
+        link: "/coming-soon"
       },
       {
         name: "Isntree Hyaluronic Acid Toner",
         description: "Hydrating toner with multiple weights of hyaluronic acid. Perfect for the 7-skin method.",
         price: 16.50,
         image: productIsntreeToner,
-        link: "/products/isntree-toner"
+        link: "/coming-soon"
       },
       {
         name: "Beauty of Joseon Glow Serum",
         description: "Propolis and niacinamide serum for brightening and evening skin tone. A K-beauty cult favorite.",
         price: 15.99,
         image: productBeautyJoseonSerum,
-        link: "/products/beauty-joseon-serum"
+        link: "/coming-soon"
       },
       {
         name: "COSRX Advanced Snail 96 Mucin Power Essence",
         description: "The holy grail essence. Repairs, hydrates, and gives that glass skin glow. Don't knock it till you try it.",
         price: 24.99,
         image: productCosrxSnailCream,
-        link: "/products/cosrx-snail-cream"
+        link: "/coming-soon"
       },
       {
         name: "Round Lab Birch Juice Moisturizing Sunscreen SPF50+",
         description: "Lightweight, non-greasy sunscreen that layers beautifully. No white cast. Your final and most crucial step.",
         price: 18.50,
         image: productRoundlabSunscreen,
-        link: "/products/roundlab-sunscreen"
+        link: "/coming-soon"
       }
     ]
   },
