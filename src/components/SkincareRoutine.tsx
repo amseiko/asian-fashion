@@ -7,7 +7,7 @@ const steps = [
     purpose: "Remove makeup & sunscreen",
     product: "COSRX Low pH Good Morning Gel Cleanser",
     price: "$10.20",
-    url: "/products/cosrx-low-ph-cleanser"
+    url: "/coming-soon"
   },
   { 
     step: "2", 
@@ -15,7 +15,7 @@ const steps = [
     purpose: "Deep clean pores",
     product: "Anua Heartleaf Pore Control Cleansing Oil",
     price: "$17.90",
-    url: "/products/anua-heartleaf-cleansing-oil"
+    url: "/coming-soon"
   },
   { 
     step: "3", 
@@ -23,7 +23,7 @@ const steps = [
     purpose: "2-3x weekly for smooth skin",
     product: "Some By Mi AHA-BHA-PHA 30 Days Miracle Toner",
     price: "$15.80",
-    url: "/products/some-by-mi-miracle-toner"
+    url: "/coming-soon"
   },
   { 
     step: "4", 
@@ -31,7 +31,7 @@ const steps = [
     purpose: "Balance & prep skin",
     product: "Isntree Hyaluronic Acid Toner",
     price: "$14.50",
-    url: "/products/isntree-hyaluronic-toner"
+    url: "/coming-soon"
   },
   { 
     step: "5", 
@@ -39,7 +39,7 @@ const steps = [
     purpose: "Boost hydration",
     product: "Missha Time Revolution The First Essence 5X",
     price: "$31.90",
-    url: "/products/missha-first-essence"
+    url: "/coming-soon"
   },
   { 
     step: "6", 
@@ -47,7 +47,7 @@ const steps = [
     purpose: "Target glass-skin glow",
     product: "Beauty of Joseon Glow Serum",
     price: "$16.80",
-    url: "/products/beauty-joseon-glow-serum"
+    url: "/coming-soon"
   },
   { 
     step: "7", 
@@ -55,7 +55,7 @@ const steps = [
     purpose: "Delicate eye area care",
     product: "Purito Centella Unscented Eye Cream",
     price: "$19.90",
-    url: "/products/purito-centella-eye-cream"
+    url: "/coming-soon"
   },
   { 
     step: "8", 
@@ -63,7 +63,7 @@ const steps = [
     purpose: "Lock in hydration",
     product: "COSRX Advanced Snail 92 All in One Cream",
     price: "$14.90",
-    url: "/products/cosrx-snail-cream"
+    url: "/coming-soon"
   },
   { 
     step: "9", 
@@ -71,7 +71,7 @@ const steps = [
     purpose: "Intensive care 2-3x weekly",
     product: "Mediheal Tea Tree Essential Blemish Control Mask",
     price: "$1.90",
-    url: "/products/mediheal-tea-tree-mask"
+    url: "/coming-soon"
   },
   { 
     step: "10", 
@@ -79,7 +79,7 @@ const steps = [
     purpose: "SPF 50+ daily (AM only)",
     product: "Round Lab Birch Juice Moisturizing Sunscreen",
     price: "$19.80",
-    url: "/products/roundlab-birch-sunscreen"
+    url: "/coming-soon"
   },
 ];
 
