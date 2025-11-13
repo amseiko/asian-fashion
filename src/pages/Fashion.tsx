@@ -134,7 +134,7 @@ const Fashion = () => {
             </h2>
             <div className="flex gap-6 overflow-x-auto pb-4 max-w-6xl mx-auto scrollbar-hide">
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">
@@ -154,7 +154,7 @@ const Fashion = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">
@@ -174,7 +174,7 @@ const Fashion = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="flex-shrink-0 w-72 bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-square bg-muted relative overflow-hidden">

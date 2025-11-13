@@ -231,7 +231,7 @@ const Trends = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
@@ -251,7 +251,7 @@ const Trends = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 group"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">

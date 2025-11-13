@@ -142,7 +142,7 @@ const Beauty = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-16">
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
@@ -157,7 +157,7 @@ const Beauty = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
@@ -172,7 +172,7 @@ const Beauty = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
@@ -187,7 +187,7 @@ const Beauty = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
@@ -202,7 +202,7 @@ const Beauty = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
@@ -217,7 +217,7 @@ const Beauty = () => {
               </a>
 
               <a
-                href="/shops-coming-soon"
+                href="/coming-soon"
                 className="group text-center"
               >
                 <div className="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-lg group-hover:shadow-xl transition-shadow">

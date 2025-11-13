@@ -33,9 +33,11 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button size="sm" className="gap-2">
-              <ShoppingBag className="w-4 h-4" />
-              Shop
+            <Button size="sm" className="gap-2" asChild>
+              <Link to="/coming-soon">
+                <ShoppingBag className="w-4 h-4" />
+                Shop
+              </Link>
             </Button>
           </div>
 
@@ -63,9 +65,11 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button size="sm" className="w-full gap-2">
-                <ShoppingBag className="w-4 h-4" />
-                Shop
+              <Button size="sm" className="w-full gap-2" asChild>
+                <Link to="/coming-soon">
+                  <ShoppingBag className="w-4 h-4" />
+                  Shop
+                </Link>
               </Button>
             </div>
           </div>
