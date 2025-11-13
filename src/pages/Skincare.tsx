@@ -206,7 +206,7 @@ const Skincare = () => {
                     <p className="text-xs text-muted-foreground mb-4">
                       {product.description}
                     </p>
-                    <a href={`/products/${product.slug}`} className="block">
+                    <a href="/coming-soon" className="block">
                       <Button className="w-full" size="sm">
                         <ShoppingCart className="w-4 h-4 mr-2" />
                         Shop Now
