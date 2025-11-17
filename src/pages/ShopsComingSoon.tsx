@@ -31,25 +31,12 @@ const ShopsComingSoon = () => {
                 <h2 className="text-lg font-semibold text-foreground mb-4">
                   Stay Updated
                 </h2>
-                <form onSubmit={handleSubmit} className="flex gap-3">
-                  <div className="flex-1 relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email"
-                      required
-                      className="w-full pl-11 pr-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="px-8 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-opacity"
-                  >
-                    Notify Me
-                  </button>
-                </form>
+                <a
+                  href="/coming-soon"
+                  className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Get updates on our Coming Soon page
+                </a>
               </div>
 
               <div className="mt-16 grid grid-cols-3 gap-8 text-center">
