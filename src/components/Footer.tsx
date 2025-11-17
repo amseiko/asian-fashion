@@ -27,10 +27,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Instagram</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Pinterest</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">TikTok</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Newsletter</a></li>
+              <li><a href="/coming-soon" className="text-muted-foreground hover:text-primary transition-colors text-sm">Instagram</a></li>
+              <li><a href="/coming-soon" className="text-muted-foreground hover:text-primary transition-colors text-sm">Pinterest</a></li>
+              <li><a href="/coming-soon" className="text-muted-foreground hover:text-primary transition-colors text-sm">TikTok</a></li>
+              <li><a href="https://x.com/asianfashion" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm">X (Twitter)</a></li>
+              <li><a href="/coming-soon#newsletter" className="text-muted-foreground hover:text-primary transition-colors text-sm">Newsletter</a></li>
             </ul>
           </div>
         </div>

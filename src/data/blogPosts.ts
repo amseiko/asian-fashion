@@ -280,8 +280,8 @@ Now go forth and glow! ✨
     readTime: "7 min read",
     image: japanBeautyStyleImage,
     author: {
-      name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      name: "Kenzo Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Kenzo spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: profileYukiTanaka
     },
     content: `
@@ -1009,8 +1009,8 @@ Now stop overthinking and just start!
     readTime: "7 min read",
     image: heroBeautyFashionImage,
     author: {
-      name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      name: "Kenzo Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Kenzo spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: profileYukiTanaka
     },
     content: `
@@ -2163,8 +2163,8 @@ Trust the science, protect your barrier, and your skin will thank you.
     readTime: "8 min read",
     image: seoulStreetSceneImage,
     author: {
-      name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      name: "Kenzo Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Kenzo spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: profileYukiTanaka
     },
     content: `
@@ -2313,8 +2313,8 @@ Now go forth and dress like the Seoul local you were always meant to be.
     readTime: "10 min read",
     image: tokyoStreetSceneImage,
     author: {
-      name: "Yuki Tanaka",
-      bio: "Tokyo-based fashion stylist and minimalist living advocate. Yuki spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
+      name: "Kenzo Tanaka",
+      bio: "Tokyo-based fashion stylist and minimalist living advocate. Kenzo spent a decade drowning in fast fashion before discovering the liberating philosophy of owning less but better. Now, he helps clients worldwide curate intentional wardrobes that actually get worn. His closet has exactly 33 items, and yes, he counts.",
       avatar: profileYukiTanaka
     },
     content: `

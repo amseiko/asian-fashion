@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { TrendingUp, Flame, Zap, Sparkles, Star, Heart } from "lucide-react";
 import heroCollage from "@/assets/hero-trends-collage.jpg";
 import trendLatte from "@/assets/trend-latte-makeup.jpg";
@@ -279,16 +280,12 @@ const Trends = () => {
               <p className="text-muted-foreground mb-8">
                 Get the latest fashion, beauty, and skincare trends delivered straight to your inbox every week.
               </p>
-              <div className="flex gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground"
-                />
-                <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                  Subscribe
-                </button>
-              </div>
+              <Link
+                to="/coming-soon"
+                className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              >
+                Get updates on our Coming Soon page
+              </Link>
             </div>
           </div>
         </section>

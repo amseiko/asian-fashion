@@ -43,7 +43,7 @@ const Hero = () => {
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in">
           Asian Fashion & Beauty
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-light">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light" style={{ color: '#111111' }}>
           Discover the latest trends in K-beauty, J-beauty, and Asian fashion. Your guide to achieving that perfect glass skin and effortless style.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
